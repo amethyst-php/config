@@ -26,13 +26,8 @@ class ConfigServiceProvider extends ServiceProvider
         }
 
         if (Schema::hasTable('configs')) {
-            $configs = (new \Railken\LaraOre\Config\ConfigManager())->getRepository()->findToLoad();
-
-            $configs = $configs->mapWithKeys(function ($config, $key) {
-                return [$config->resolveKey($config->key) => $config->value];
-            })->toArray();
-
-            config($configs);
+            $manager = new \Railken\LaraOre\Config\ConfigManager();
+            $manager->loadConfig();
         }
     }
 

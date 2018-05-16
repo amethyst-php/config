@@ -44,4 +44,20 @@ class ConfigManager extends ModelManager
 
         parent::__construct($agent);
     }
+
+    /**
+     * Load configs.
+     *
+     * @return void
+     */
+    public function loadConfig()
+    {
+        $configs = $this->getRepository()->findToLoad();
+
+        $configs = $configs->mapWithKeys(function ($config, $key) {
+            return [$config->resolveKey($config->key) => $config->value];
+        })->toArray();
+
+        config($configs);
+    }
 }
