@@ -22,7 +22,7 @@ class ValueAttribute extends BaseAttribute
      *
      * @var bool
      */
-    protected $required = false;
+    protected $required = true;
 
     /**
      * Is the attribute unique.
@@ -60,6 +60,6 @@ class ValueAttribute extends BaseAttribute
      */
     public function valid(EntityContract $entity, $value)
     {
-        return v::length(1, 255)->validate($value);
+        return true;
     }
 }

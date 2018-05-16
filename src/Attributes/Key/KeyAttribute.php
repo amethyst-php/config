@@ -22,14 +22,14 @@ class KeyAttribute extends BaseAttribute
      *
      * @var bool
      */
-    protected $required = false;
+    protected $required = true;
 
     /**
      * Is the attribute unique.
      *
      * @var bool
      */
-    protected $unique = false;
+    protected $unique = true;
 
     /**
      * List of all exceptions used in validation.
@@ -40,6 +40,7 @@ class KeyAttribute extends BaseAttribute
         Tokens::NOT_DEFINED    => Exceptions\ConfigKeyNotDefinedException::class,
         Tokens::NOT_VALID      => Exceptions\ConfigKeyNotValidException::class,
         Tokens::NOT_AUTHORIZED => Exceptions\ConfigKeyNotAuthorizedException::class,
+        Tokens::NOT_UNIQUE     => Exceptions\ConfigKeyNotUniqueException::class,
     ];
 
     /**

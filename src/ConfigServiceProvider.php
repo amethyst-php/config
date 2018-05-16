@@ -19,7 +19,7 @@ class ConfigServiceProvider extends ServiceProvider
             __DIR__.'/../config/ore.config.php' => config_path('ore.config.php'),
         ], 'config');
 
-        if (!class_exists('CreateDisksTable')) {
+        if (!class_exists('CreateConfigsTable')) {
             $this->publishes([
                 __DIR__.'/../database/migrations/create_configs_table.php.stub' => database_path('migrations/'.date('Y_m_d_His', time()).'_create_configs_table.php'),
             ], 'migrations');

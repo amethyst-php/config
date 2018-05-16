@@ -20,6 +20,7 @@ class ConfigTest extends BaseTest
      */
     public function getManager()
     {
+        return new ConfigManager();
     }
 
     /**
@@ -38,7 +39,28 @@ class ConfigTest extends BaseTest
 
     public function testSuccessCommon()
     {
-        $this->commonTest(new ConfigManager(), $this->getParameters());
+        $this->commonTest($this->getmanager(), $this->getParameters());
+    }
+
+    public function testNotDefined()
+    {
+        $manager = $this->getManager();
+        $this->assertArraySubset([['code' => 'CONFIG_KEY_NOT_DEFINED']], $manager->create($this->getParameters()->remove('key'))->getSimpleErrors()->toArray());
+        $this->assertArraySubset([['code' => 'CONFIG_VALUE_NOT_DEFINED']], $manager->create($this->getParameters()->remove('value'))->getSimpleErrors()->toArray());
+    }
+
+    public function testNotValid()
+    {
+        $manager = $this->getManager();
+        $this->assertArraySubset([['code' => 'CONFIG_KEY_NOT_VALID']], $manager->create($this->getParameters()->set('key', ''))->getSimpleErrors()->toArray());
+        //$this->assertArraySubset([['code' => 'CONFIG_VALUE_NOT_VALID']], $manager->create($this->getParameters()->set('value', ''))->getSimpleErrors()->toArray());
+    }
+
+    public function testNotUnique()
+    {
+        $manager = $this->getManager();
+        $manager->create($this->getParameters()->set('key', 'unique'));
+        $this->assertArraySubset([['code' => 'CONFIG_KEY_NOT_UNIQUE']], $manager->create($this->getParameters()->set('key', 'unique'))->getSimpleErrors()->toArray());
     }
 
 }

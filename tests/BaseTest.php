@@ -29,7 +29,6 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
 
         File::cleanDirectory(database_path("migrations/"));
 
-
         $this->artisan('vendor:publish', [
             '--provider' => 'Railken\LaraOre\Config\ConfigServiceProvider',
             '--tag' => 'config'
