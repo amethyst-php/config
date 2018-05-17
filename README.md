@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/railken/lara-ore-config.svg?branch=master)](https://travis-ci.org/railken/lara-ore-config)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A laravel package to manage configs with the database
+A laravel package save configs using the database
 
 # Requirements
 
