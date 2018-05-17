@@ -30,7 +30,6 @@ class ConfigTest extends BaseTest
      */
     public function getParameters()
     {
-    
         $bag = new bag();
         $bag->set('key', str_random(40));
         $bag->set('value', str_random(40));
@@ -62,5 +61,4 @@ class ConfigTest extends BaseTest
         $manager->create($this->getParameters()->set('key', 'unique'));
         $this->assertArraySubset([['code' => 'CONFIG_KEY_NOT_UNIQUE']], $manager->create($this->getParameters()->set('key', 'unique'))->getSimpleErrors()->toArray());
     }
-
 }

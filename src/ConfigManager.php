@@ -14,10 +14,10 @@ class ConfigManager extends ModelManager
      * @var array
      */
     protected $attributes = [
-        Attributes\Id\IdAttribute::class, 
-        Attributes\Key\KeyAttribute::class, 
-        Attributes\Value\ValueAttribute::class, 
-        Attributes\CreatedAt\CreatedAtAttribute::class, 
+        Attributes\Id\IdAttribute::class,
+        Attributes\Key\KeyAttribute::class,
+        Attributes\Value\ValueAttribute::class,
+        Attributes\CreatedAt\CreatedAtAttribute::class,
         Attributes\UpdatedAt\UpdatedAtAttribute::class
     ];
 

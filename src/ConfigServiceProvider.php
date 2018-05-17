@@ -30,5 +30,4 @@ class ConfigServiceProvider extends ServiceProvider
             $manager->loadConfig();
         }
     }
-
 }

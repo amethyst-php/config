@@ -13,7 +13,7 @@ class Config extends Model implements EntityContract
      *
      * @var string
      */
-    protected $table = 'config';
+    protected $table;
 
     /**
      * The attributes that are mass assignable.
@@ -32,5 +32,4 @@ class Config extends Model implements EntityContract
         parent::__construct($attributes);
         $this->table = \Illuminate\Support\Facades\Config::get('ore.config.table', 'ore_configs');
     }
-
 }
