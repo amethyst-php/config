@@ -39,7 +39,7 @@ class ConfigTest extends BaseTest
 
     public function testSuccessCommon()
     {
-        $this->commonTest($this->getmanager(), $this->getParameters());
+        $this->commonTest($this->getManager(), $this->getParameters());
     }
 
     public function testNotDefined()
