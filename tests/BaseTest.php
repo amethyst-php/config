@@ -10,7 +10,6 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
     {
         return [
             \Railken\Laravel\Manager\ManagerServiceProvider::class,
-            \Railken\Laravel\App\AppServiceProvider::class,
             \Railken\LaraOre\Config\ConfigServiceProvider::class,
         ];
     }
