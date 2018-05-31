@@ -16,10 +16,17 @@
     },
     "autoload": {
         "psr-4" : {
-            "Railken\\LaraOre\\Config\\" : "src/"
+            "Railken\\LaraOre\\" : "src/"
         }
     },
     "autoload-dev": {
         "psr-4": { "Railken\\LaraOre\\Config\\Tests\\": "tests/" }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Railken\\LaraOre\\ConfigServiceProvider"
+            ]
+        }
     }
 }
