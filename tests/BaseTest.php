@@ -9,7 +9,6 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
     protected function getPackageProviders($app)
     {
         return [
-            \Railken\Laravel\Manager\ManagerServiceProvider::class,
             \Railken\LaraOre\ConfigServiceProvider::class,
         ];
     }
@@ -22,23 +21,14 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
         $dotenv = new \Dotenv\Dotenv(__DIR__.'/..', '.env');
         $dotenv->load();
 
-
-
         parent::setUp();
 
         File::cleanDirectory(database_path("migrations/"));
 
         $this->artisan('vendor:publish', [
             '--provider' => 'Railken\LaraOre\ConfigServiceProvider',
-            '--tag' => 'config'
+            '--force' => 'true'
         ]);
-
-
-        $this->artisan('vendor:publish', [
-            '--provider' => 'Railken\LaraOre\ConfigServiceProvider',
-            '--tag' => 'migrations'
-        ]);
-
 
         $this->artisan('migrate:fresh');
         $this->artisan('migrate');

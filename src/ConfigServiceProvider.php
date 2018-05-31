@@ -38,6 +38,7 @@ class ConfigServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->app->register(\Railken\Laravel\Manager\ManagerServiceProvider::class);
         $this->mergeConfigFrom(__DIR__.'/../config/ore.config.php', 'ore.config');
     }
 }
