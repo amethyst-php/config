@@ -7,7 +7,7 @@ A laravel package save configs using the database
 
 # Requirements
 
-PHP 7.0.0 and later.
+PHP 7.1 and later.
 
 
 ## Installation
