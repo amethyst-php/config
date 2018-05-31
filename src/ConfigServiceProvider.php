@@ -30,4 +30,14 @@ class ConfigServiceProvider extends ServiceProvider
             $manager->loadConfig();
         }
     }
+
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->mergeConfigFrom(__DIR__.'/../config/ore.config.php', 'ore.config');
+    }
 }

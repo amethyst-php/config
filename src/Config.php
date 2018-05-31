@@ -30,6 +30,6 @@ class Config extends Model implements EntityContract
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
-        $this->table = \Illuminate\Support\Facades\Config::get('ore.config.table', 'ore_configs');
+        $this->table = \Illuminate\Support\Facades\Config::get('ore.config.table');
     }
 }
