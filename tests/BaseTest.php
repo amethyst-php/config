@@ -10,7 +10,7 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
     {
         return [
             \Railken\Laravel\Manager\ManagerServiceProvider::class,
-            \Railken\LaraOre\Config\ConfigServiceProvider::class,
+            \Railken\LaraOre\ConfigServiceProvider::class,
         ];
     }
 
@@ -29,13 +29,13 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
         File::cleanDirectory(database_path("migrations/"));
 
         $this->artisan('vendor:publish', [
-            '--provider' => 'Railken\LaraOre\Config\ConfigServiceProvider',
+            '--provider' => 'Railken\LaraOre\ConfigServiceProvider',
             '--tag' => 'config'
         ]);
 
 
         $this->artisan('vendor:publish', [
-            '--provider' => 'Railken\LaraOre\Config\ConfigServiceProvider',
+            '--provider' => 'Railken\LaraOre\ConfigServiceProvider',
             '--tag' => 'migrations'
         ]);
 

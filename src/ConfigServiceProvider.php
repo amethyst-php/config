@@ -1,6 +1,6 @@
 <?php
 
-namespace Railken\LaraOre\Config;
+namespace Railken\LaraOre;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;

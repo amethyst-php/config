@@ -23,7 +23,7 @@ The package will automatically register itself.
 You can publish the migration with:
 
 ```bash
-php artisan vendor:publish --provider="Railken\LaraOre\Config\ConfigServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="Railken\LaraOre\ConfigServiceProvider" --tag="migrations"
 ```
 
 After the migration has been published you can create the migration-table by running the migrations:
@@ -34,7 +34,7 @@ php artisan migrate
 You can publish the config-file with:
 
 ```bash
-php artisan vendor:publish --provider="Railken\LaraOre\Config\ConfigServiceProvide" --tag="config"
+php artisan vendor:publish --provider="Railken\LaraOre\ConfigServiceProvide" --tag="config"
 ```
 
 ## Configuration
