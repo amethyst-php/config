@@ -4,6 +4,7 @@ namespace Railken\LaraOre\Config\Tests;
 
 use Railken\Bag;
 use Railken\LaraOre\Config\ConfigManager;
+use Illuminate\Support\Facades\Config;
 
 /**
  * Testing config
@@ -64,7 +65,9 @@ class ConfigTest extends BaseTest
 
     public function testLoadConfig()
     {
+        $result = $this->getManager()->create($this->getParameters()->set('key', 'mail_host')->set('value', 'testdummy'));
+        $this->assertEquals(true, $result->ok());
         $this->getManager()->loadConfig();
-        $this->assertEquals(1, 1);
+        $this->assertEquals('testdummy', Config::get('mail.host'));
     }
 }

@@ -4,6 +4,7 @@ namespace Railken\LaraOre\Config;
 
 use Illuminate\Database\Eloquent\Model;
 use Railken\Laravel\Manager\Contracts\EntityContract;
+use Illuminate\Support\Facades\Config as ConfigFacade;
 
 class Config extends Model implements EntityContract
 {
@@ -31,5 +32,12 @@ class Config extends Model implements EntityContract
     {
         parent::__construct($attributes);
         $this->table = \Illuminate\Support\Facades\Config::get('ore.config.table');
+    }
+
+    public function resolveKey($key)
+    {
+        $configs = ConfigFacade::get('ore.config.editable');
+ 
+        return isset($configs[$key]) ? $configs[$key] : 'void';
     }
 }
