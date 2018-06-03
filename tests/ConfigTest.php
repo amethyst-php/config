@@ -61,4 +61,10 @@ class ConfigTest extends BaseTest
         $manager->create($this->getParameters()->set('key', 'unique'));
         $this->assertArraySubset([['code' => 'CONFIG_KEY_NOT_UNIQUE']], $manager->create($this->getParameters()->set('key', 'unique'))->getSimpleErrors()->toArray());
     }
+
+    public function testLoadConfig()
+    {
+        $this->getManager()->loadConfig();
+        $this->assertEquals(1, 1);
+    }
 }
