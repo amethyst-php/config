@@ -4,6 +4,7 @@ namespace Railken\LaraOre;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Config;
 
 class ConfigServiceProvider extends ServiceProvider
 {
@@ -25,7 +26,7 @@ class ConfigServiceProvider extends ServiceProvider
             ], 'migrations');
         }
 
-        if (Schema::hasTable('configs')) {
+        if (Schema::hasTable(Config::get('ore.config.table'))) {
             $manager = new \Railken\LaraOre\Config\ConfigManager();
             $manager->loadConfig();
         }
