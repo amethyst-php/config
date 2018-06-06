@@ -12,7 +12,6 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
             \Railken\LaraOre\ConfigServiceProvider::class,
         ];
     }
-
     /**
      * Setup the test environment.
      */
@@ -22,15 +21,10 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
         $dotenv->load();
 
         parent::setUp();
-
-        File::cleanDirectory(database_path("migrations/"));
-
-        $this->artisan('vendor:publish', [
-            '--provider' => 'Railken\LaraOre\ConfigServiceProvider',
-            '--force' => 'true'
-        ]);
-
+        
         $this->artisan('migrate:fresh');
+        $this->artisan('vendor:publish', ['--provider' => 'Railken\LaraOre\ConfigServiceProvider', '--force' => true]);
+        $this->artisan('lara-ore:user:install');
         $this->artisan('migrate');
     }
 }

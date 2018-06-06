@@ -4,15 +4,11 @@ namespace Railken\LaraOre\Config\Tests;
 
 use Railken\Bag;
 use Railken\LaraOre\Config\ConfigManager;
-use Illuminate\Support\Facades\Config;
+use Railken\LaraOre\Support\Testing\ManagerTestableTrait;
 
-/**
- * Testing config
- * Attributes
- */
 class ConfigTest extends BaseTest
 {
-    use Traits\CommonTrait;
+    use ManagerTestableTrait;
     
     /**
      * Retrieve basic url.
