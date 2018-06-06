@@ -20,11 +20,7 @@ class ConfigServiceProvider extends ServiceProvider
             __DIR__.'/../config/ore.config.php' => config_path('ore.config.php'),
         ], 'config');
 
-        if (!class_exists('CreateConfigsTable')) {
-            $this->publishes([
-                __DIR__.'/../database/migrations/create_configs_table.php.stub' => database_path('migrations/'.(new \DateTime())->format("Y_m_d_His.u").'_create_configs_table.php'),
-            ], 'migrations');
-        }
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
 
         if (Schema::hasTable(Config::get('ore.config.table'))) {
             $manager = new \Railken\LaraOre\Config\ConfigManager();
