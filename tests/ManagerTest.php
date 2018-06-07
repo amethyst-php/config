@@ -6,7 +6,7 @@ use Railken\Bag;
 use Railken\LaraOre\Config\ConfigManager;
 use Railken\LaraOre\Support\Testing\ManagerTestableTrait;
 
-class ConfigTest extends BaseTest
+class ManagerTest extends BaseTest
 {
     use ManagerTestableTrait;
     
@@ -64,6 +64,6 @@ class ConfigTest extends BaseTest
         $result = $this->getManager()->create($this->getParameters()->set('key', 'mail_host')->set('value', 'testdummy'));
         $this->assertEquals(true, $result->ok());
         $this->getManager()->loadConfig();
-        $this->assertEquals('testdummy', Config::get('mail.host'));
+        $this->assertEquals('testdummy', \Illuminate\Support\Facades\Config::get('mail.host'));
     }
 }
