@@ -3,6 +3,7 @@
 namespace Railken\LaraOre\Config\Tests;
 
 use Illuminate\Support\Facades\File;
+use Railken\Bag;
 
 abstract class BaseTest extends \Orchestra\Testbench\TestCase
 {
@@ -12,6 +13,20 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
             \Railken\LaraOre\ConfigServiceProvider::class,
         ];
     }
+
+    /**
+     * Retrieve correct bag of parameters.
+     *
+     * @return Bag
+     */
+    public function getParameters()
+    {
+        $bag = new bag();
+        $bag->set('key', str_random(40));
+        $bag->set('value', str_random(40));
+        return $bag;
+    }
+
     /**
      * Setup the test environment.
      */

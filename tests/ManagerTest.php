@@ -2,7 +2,6 @@
 
 namespace Railken\LaraOre\Config\Tests;
 
-use Railken\Bag;
 use Railken\LaraOre\Config\ConfigManager;
 use Railken\LaraOre\Support\Testing\ManagerTestableTrait;
 
@@ -18,19 +17,6 @@ class ManagerTest extends BaseTest
     public function getManager()
     {
         return new ConfigManager();
-    }
-
-    /**
-     * Retrieve correct bag of parameters.
-     *
-     * @return Bag
-     */
-    public function getParameters()
-    {
-        $bag = new bag();
-        $bag->set('key', str_random(40));
-        $bag->set('value', str_random(40));
-        return $bag;
     }
 
     public function testSuccessCommon()

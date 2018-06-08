@@ -2,7 +2,6 @@
 
 namespace Railken\LaraOre\Config\Tests;
 
-use Railken\Bag;
 use Railken\LaraOre\Support\Testing\ApiTestableTrait;
 
 class ApiTest extends BaseTest
@@ -18,20 +17,6 @@ class ApiTest extends BaseTest
     {
         return '/api/v1/admin/configs';
     }
-
-    /**
-     * Retrieve correct bag of parameters.
-     *
-     * @return Bag
-     */
-    public function getParameters()
-    {
-        $bag = new bag();
-        $bag->set('key', str_random(40));
-        $bag->set('value', str_random(40));
-        return $bag;
-    }
-
     
     public function signIn()
     {
