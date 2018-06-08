@@ -20,5 +20,13 @@ return [
         'mail_encryption' => 'mail.encryption', 
         'mail_from_name' => 'mail.from.name', 
         'mail_from_address' => 'mail.from.address', 
+    ],
+
+    'router' => [
+        'prefix' => 'admin/configs',
+        'middlewares' => [
+            \Railken\LaraOre\RequestLoggerMiddleware::class,
+            'auth:api',
+        ]
     ]
 ];
