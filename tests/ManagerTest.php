@@ -8,7 +8,7 @@ use Railken\LaraOre\Support\Testing\ManagerTestableTrait;
 class ManagerTest extends BaseTest
 {
     use ManagerTestableTrait;
-    
+
     /**
      * Retrieve basic url.
      *
