@@ -14,7 +14,7 @@ class ConfigManager extends ModelManager
      * @var string
      */
     public $entity = Config::class;
-    
+
     /**
      * List of all attributes.
      *
@@ -25,7 +25,7 @@ class ConfigManager extends ModelManager
         Attributes\Key\KeyAttribute::class,
         Attributes\Value\ValueAttribute::class,
         Attributes\CreatedAt\CreatedAtAttribute::class,
-        Attributes\UpdatedAt\UpdatedAtAttribute::class
+        Attributes\UpdatedAt\UpdatedAtAttribute::class,
     ];
 
     /**
