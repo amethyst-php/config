@@ -2,15 +2,13 @@
 
 namespace Railken\LaraOre;
 
-use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\ServiceProvider;
 use Railken\LaraOre\Api\Support\Router;
 
 class ConfigServiceProvider extends ServiceProvider
 {
-
     /**
      * Bootstrap any application services.
      *
@@ -49,10 +47,10 @@ class ConfigServiceProvider extends ServiceProvider
     }
     
     /**
-    * Load routes.
-    *
-    * @return void
-    */
+     * Load routes.
+     *
+     * @return void
+     */
     public function loadRoutes()
     {
         Router::group(array_merge(Config::get('ore.config.router'), [

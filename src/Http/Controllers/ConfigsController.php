@@ -19,7 +19,7 @@ class ConfigsController extends RestController
         'key',
         'value',
         'created_at',
-        'updated_at'
+        'updated_at',
     ];
 
     public $fillable = [
