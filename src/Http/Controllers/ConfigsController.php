@@ -14,7 +14,7 @@ class ConfigsController extends RestController
     use RestTraits\RestShowTrait;
     use RestTraits\RestRemoveTrait;
 
-    protected static $query = [
+    public $queryable = [
         'id',
         'key',
         'value',
@@ -22,7 +22,7 @@ class ConfigsController extends RestController
         'updated_at'
     ];
 
-    protected static $fillable = [
+    public $fillable = [
         'key',
         'value',
     ];
