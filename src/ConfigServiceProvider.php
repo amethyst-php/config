@@ -47,6 +47,7 @@ class ConfigServiceProvider extends ServiceProvider
         $this->app->register(\Railken\LaraOre\UserServiceProvider::class);
         $this->mergeConfigFrom(__DIR__.'/../config/ore.config.php', 'ore.config');
     }
+    
     /**
     * Load routes.
     *
