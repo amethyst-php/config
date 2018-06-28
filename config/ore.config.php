@@ -23,10 +23,6 @@ return [
     ],
 
     'router' => [
-        'prefix'      => '/admin/configs',
-        'middlewares' => [
-            \Railken\LaraOre\RequestLoggerMiddleware::class,
-            'auth:api',
-        ],
+        'prefix' => '/admin/configs'
     ],
 ];
