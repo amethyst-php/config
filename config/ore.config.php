@@ -117,7 +117,7 @@ return [
         |
         */
         'router' => [
-                'prefix' => '/admin/configs'
+            'prefix' => '/admin/configs'
         ],
     ],
     
