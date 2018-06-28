@@ -52,14 +52,14 @@ class ConfigServiceProvider extends ServiceProvider
      */
     public function loadRoutes()
     {
-        Router::group(array_merge(Config::get('ore.config.router'), [
-            'namespace' => 'Railken\LaraOre\Http\Controllers',
-        ]), function ($router) {
-            $router->get('/', ['uses' => 'ConfigsController@index']);
-            $router->post('/', ['uses' => 'ConfigsController@create']);
-            $router->put('/{id}', ['uses' => 'ConfigsController@update']);
-            $router->delete('/{id}', ['uses' => 'ConfigsController@remove']);
-            $router->get('/{id}', ['uses' => 'ConfigsController@show']);
+        Router::group(Config::get('ore.config.http.router'), function ($router) {
+            $controller = Config::get('ore.config.http.controller');
+            
+            $router->get('/', ['uses' => $controller . '@index']);
+            $router->post('/', ['uses' => $controller . '@create']);
+            $router->put('/{id}', ['uses' => $controller . '@update']);
+            $router->delete('/{id}', ['uses' => $controller . '@remove']);
+            $router->get('/{id}', ['uses' => $controller . '@show']);
         });
     }
 }

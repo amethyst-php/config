@@ -20,7 +20,10 @@ class Config extends Model implements EntityContract
      *
      * @var array
      */
-    protected $fillable = ['key', 'value'];
+    protected $fillable = [
+        'key',
+        'value'
+    ];
 
     /**
      * Creates a new instance of the model.
@@ -30,7 +33,8 @@ class Config extends Model implements EntityContract
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
-        $this->table = \Illuminate\Support\Facades\Config::get('ore.config.table');
+        $this->table = ConfigFacade::get('ore.config.table');
+        $this->fillable = array_merge($this->fillable, array_keys(ConfigFacade::get('ore.config.attributes')));
     }
 
     public function resolveKey($key)

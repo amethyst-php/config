@@ -5,6 +5,7 @@ namespace Railken\LaraOre\Config;
 use Railken\Laravel\Manager\Contracts\AgentContract;
 use Railken\Laravel\Manager\ModelManager;
 use Railken\Laravel\Manager\Tokens;
+use Illuminate\Support\Facades\Config;
 
 class ConfigManager extends ModelManager
 {
@@ -13,7 +14,7 @@ class ConfigManager extends ModelManager
      *
      * @var string
      */
-    public $entity = Config::class;
+    public $entity;
 
     /**
      * List of all attributes.
@@ -44,14 +45,23 @@ class ConfigManager extends ModelManager
      */
     public function __construct(AgentContract $agent = null)
     {
-        $this->setRepository(new ConfigRepository($this));
-        $this->setSerializer(new ConfigSerializer($this));
-        $this->setValidator(new ConfigValidator($this));
-        $this->setAuthorizer(new ConfigAuthorizer($this));
+        $this->entity = Config::get('ore.config.entity');
+        $this->attributes = array_merge($this->attributes, array_values(Config::get('ore.config.attributes')));
+        
+        $classRepository = Config::get('ore.config.repository');
+        $this->setRepository(new $classRepository($this));
+
+        $classSerializer = Config::get('ore.config.serializer');
+        $this->setSerializer(new $classSerializer($this));
+
+        $classAuthorizer = Config::get('ore.config.authorizer');
+        $this->setAuthorizer(new $classAuthorizer($this));
+
+        $classValidator = Config::get('ore.config.validator');
+        $this->setValidator(new $classValidator($this));
 
         parent::__construct($agent);
     }
-
     /**
      * Load configs.
      *
