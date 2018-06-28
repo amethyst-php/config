@@ -21,6 +21,11 @@ class ConfigsController extends RestConfigurableController
      */
     public $config = 'ore.config';
 
+    /**
+     * The attributes that are queryable.
+     *
+     * @var array
+     */
     public $queryable = [
         'id',
         'key',
@@ -29,6 +34,11 @@ class ConfigsController extends RestConfigurableController
         'updated_at',
     ];
 
+    /**
+     * The attributes that are fillable.
+     *
+     * @var array
+     */
     public $fillable = [
         'key',
         'value',
