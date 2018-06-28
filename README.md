@@ -4,9 +4,7 @@
 [![StyleCI](https://github.styleci.io/repos/133684325/shield?branch=master)](https://github.styleci.io/repos/133684325)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-This is a lara-ore package.
-
-Provides the config [Address](src/Config/Config.php) allowing to manage config saved in the database.
+This is a [lara-ore](https://github.com/railken/lara-ore) package
 
 # Requirements
 
