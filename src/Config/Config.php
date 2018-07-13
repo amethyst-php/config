@@ -22,7 +22,7 @@ class Config extends Model implements EntityContract
      */
     protected $fillable = [
         'key',
-        'value'
+        'value',
     ];
 
     /**
@@ -39,8 +39,6 @@ class Config extends Model implements EntityContract
 
     public function resolveKey($key)
     {
-        $configs = ConfigFacade::get('ore.config.editable');
-
-        return isset($configs[$key]) ? $configs[$key] : 'void';
+        return $key;
     }
 }

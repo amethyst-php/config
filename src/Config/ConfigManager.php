@@ -2,10 +2,10 @@
 
 namespace Railken\LaraOre\Config;
 
+use Illuminate\Support\Facades\Config;
 use Railken\Laravel\Manager\Contracts\AgentContract;
 use Railken\Laravel\Manager\ModelManager;
 use Railken\Laravel\Manager\Tokens;
-use Illuminate\Support\Facades\Config;
 
 class ConfigManager extends ModelManager
 {
@@ -47,7 +47,7 @@ class ConfigManager extends ModelManager
     {
         $this->entity = Config::get('ore.config.entity');
         $this->attributes = array_merge($this->attributes, array_values(Config::get('ore.config.attributes')));
-        
+
         $classRepository = Config::get('ore.config.repository');
         $this->setRepository(new $classRepository($this));
 
@@ -62,14 +62,16 @@ class ConfigManager extends ModelManager
 
         parent::__construct($agent);
     }
+
     /**
      * Load configs.
-     *
-     * @return void
      */
     public function loadConfig()
     {
-        $configs = $this->getRepository()->findToLoad();
+        /** @var ConfigRepository */
+        $repository = $this->getRepository();
+
+        $configs = $repository->findToLoad();
 
         $configs = $configs->mapWithKeys(function ($config, $key) {
             return [$config->resolveKey($config->key) => $config->value];

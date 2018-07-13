@@ -48,7 +48,7 @@ class ManagerTest extends BaseTest
 
     public function testLoadConfig()
     {
-        $result = $this->getManager()->create(ConfigFaker::make()->parameters()->set('key', 'mail_host')->set('value', 'testdummy'));
+        $result = $this->getManager()->create(ConfigFaker::make()->parameters()->set('key', 'mail.host')->set('value', 'testdummy'));
         $this->assertEquals(true, $result->ok());
         $this->getManager()->loadConfig();
         $this->assertEquals('testdummy', \Illuminate\Support\Facades\Config::get('mail.host'));

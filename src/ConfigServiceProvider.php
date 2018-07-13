@@ -11,8 +11,6 @@ class ConfigServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
-     *
-     * @return void
      */
     public function boot()
     {
@@ -35,8 +33,6 @@ class ConfigServiceProvider extends ServiceProvider
 
     /**
      * Register any application services.
-     *
-     * @return void
      */
     public function register()
     {
@@ -47,19 +43,17 @@ class ConfigServiceProvider extends ServiceProvider
 
     /**
      * Load routes.
-     *
-     * @return void
      */
     public function loadRoutes()
     {
         Router::group(Config::get('ore.config.http.router'), function ($router) {
             $controller = Config::get('ore.config.http.controller');
-            
-            $router->get('/', ['uses' => $controller . '@index']);
-            $router->post('/', ['uses' => $controller . '@create']);
-            $router->put('/{id}', ['uses' => $controller . '@update']);
-            $router->delete('/{id}', ['uses' => $controller . '@remove']);
-            $router->get('/{id}', ['uses' => $controller . '@show']);
+
+            $router->get('/', ['uses' => $controller.'@index']);
+            $router->post('/', ['uses' => $controller.'@create']);
+            $router->put('/{id}', ['uses' => $controller.'@update']);
+            $router->delete('/{id}', ['uses' => $controller.'@remove']);
+            $router->get('/{id}', ['uses' => $controller.'@show']);
         });
     }
 }

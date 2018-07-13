@@ -2,8 +2,8 @@
 
 namespace Railken\LaraOre\Config;
 
-use Railken\Bag;
 use Faker\Factory;
+use Railken\Bag;
 use Railken\Laravel\Manager\BaseFaker;
 
 class ConfigFaker extends BaseFaker
@@ -19,9 +19,9 @@ class ConfigFaker extends BaseFaker
     public function parameters()
     {
         $faker = Factory::create();
-        
+
         $bag = new Bag();
-        $bag->set('key', "mail_host");
+        $bag->set('key', 'mail.host');
         $bag->set('value', $faker->password);
 
         return $bag;

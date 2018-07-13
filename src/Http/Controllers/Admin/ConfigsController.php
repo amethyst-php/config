@@ -4,7 +4,6 @@ namespace Railken\LaraOre\Http\Controllers\Admin;
 
 use Railken\LaraOre\Api\Http\Controllers\RestConfigurableController;
 use Railken\LaraOre\Api\Http\Controllers\Traits as RestTraits;
-use Railken\LaraOre\Config\ConfigManager;
 
 class ConfigsController extends RestConfigurableController
 {
@@ -15,7 +14,7 @@ class ConfigsController extends RestConfigurableController
     use RestTraits\RestRemoveTrait;
 
     /**
-     * The config path
+     * The config path.
      *
      * @var string
      */
