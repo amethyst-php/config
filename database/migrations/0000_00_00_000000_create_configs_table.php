@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Config;
 
 class CreateConfigsTable extends Migration
 {
@@ -13,7 +14,7 @@ class CreateConfigsTable extends Migration
      */
     public function up()
     {
-        Schema::create('ore_configs', function (Blueprint $table) {
+        Schema::create(Config::get('ore.config.table'), function (Blueprint $table) {
             $table->increments('id');
             $table->text('key');
             $table->text('value');
@@ -28,6 +29,6 @@ class CreateConfigsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ore_configs');
+        Schema::dropIfExists(Config::get('ore.config.table'));
     }
 }
