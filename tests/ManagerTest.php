@@ -2,9 +2,9 @@
 
 namespace Railken\LaraOre\Config\Tests;
 
+use Railken\LaraOre\Config\ConfigFaker;
 use Railken\LaraOre\Config\ConfigManager;
 use Railken\LaraOre\Support\Testing\ManagerTestableTrait;
-use Railken\LaraOre\Config\ConfigFaker;
 
 class ManagerTest extends BaseTest
 {

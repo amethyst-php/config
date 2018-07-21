@@ -2,6 +2,7 @@
 
 namespace Railken\LaraOre;
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
@@ -46,8 +47,10 @@ class ConfigServiceProvider extends ServiceProvider
      */
     public function loadRoutes()
     {
-        Router::group(Config::get('ore.config.http.router'), function ($router) {
-            $controller = Config::get('ore.config.http.controller');
+        $config = Config::get('ore.config.http.admin');
+
+        Router::group(Arr::get($config, 'router'), function ($router) use ($config) {
+            $controller = Arr::get($config, 'controller');
 
             $router->get('/', ['uses' => $controller.'@index']);
             $router->post('/', ['uses' => $controller.'@create']);

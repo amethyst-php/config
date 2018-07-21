@@ -2,17 +2,8 @@
 
 namespace Railken\LaraOre\Config\Tests;
 
-use Railken\Bag;
-
 abstract class BaseTest extends \Orchestra\Testbench\TestCase
 {
-    protected function getPackageProviders($app)
-    {
-        return [
-            \Railken\LaraOre\ConfigServiceProvider::class,
-        ];
-    }
-
     /**
      * Setup the test environment.
      */
@@ -26,5 +17,12 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
         $this->artisan('migrate:fresh');
         // $this->artisan('vendor:publish', ['--provider' => 'Railken\LaraOre\ConfigServiceProvider', '--force' => true]);
         $this->artisan('migrate');
+    }
+
+    protected function getPackageProviders($app)
+    {
+        return [
+            \Railken\LaraOre\ConfigServiceProvider::class,
+        ];
     }
 }
