@@ -49,7 +49,7 @@ class ConfigServiceProvider extends ServiceProvider
     {
         $config = Config::get('ore.config.http.admin');
 
-        Router::group(Arr::get($config, 'router'), function ($router) use ($config) {
+        Router::group('admin', Arr::get($config, 'router'), function ($router) use ($config) {
             $controller = Arr::get($config, 'controller');
 
             $router->get('/', ['uses' => $controller.'@index']);
