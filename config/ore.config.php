@@ -107,7 +107,7 @@ return [
             'enabled'    => true,
             'controller' => Railken\LaraOre\Http\Controllers\App\ConfigsController::class,
             'router'     => [
-                'prefix' => '/app/configs',
+                'prefix' => '/configs',
             ],
         ],
         'admin' => [
