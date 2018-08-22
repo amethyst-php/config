@@ -23,6 +23,7 @@ class ConfigFaker extends BaseFaker
         $bag = new Bag();
         $bag->set('key', 'mail.host');
         $bag->set('value', $faker->password);
+        $bag->set('visibility', 'public');
 
         return $bag;
     }

@@ -27,4 +27,16 @@ class ApiTest extends BaseTest
     {
         $this->commonTest($this->getBaseUrl(), ConfigFaker::make()->parameters());
     }
+
+    public function testApp()
+    {
+        $url = Config::get('ore.api.router.prefix').Config::get('ore.config.http.app.router.prefix');
+
+        // GET /
+        $response = $this->get($url, []);
+        $this->assertOrPrint($response, 200);
+        // GET /
+        $response = $this->get($url, ['query' => 'id eq 1']);
+        $this->assertOrPrint($response, 200);
+    }
 }

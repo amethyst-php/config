@@ -1,6 +1,6 @@
 <?php
 
-namespace Railken\LaraOre\Http\Controllers\Admin;
+namespace Railken\LaraOre\Http\Controllers\App;
 
 use Railken\LaraOre\Api\Http\Controllers\RestConfigurableController;
 use Railken\LaraOre\Api\Http\Controllers\Traits as RestTraits;
@@ -8,10 +8,6 @@ use Railken\LaraOre\Api\Http\Controllers\Traits as RestTraits;
 class ConfigsController extends RestConfigurableController
 {
     use RestTraits\RestIndexTrait;
-    use RestTraits\RestCreateTrait;
-    use RestTraits\RestUpdateTrait;
-    use RestTraits\RestShowTrait;
-    use RestTraits\RestRemoveTrait;
 
     /**
      * The config path.
@@ -35,13 +31,12 @@ class ConfigsController extends RestConfigurableController
     ];
 
     /**
-     * The attributes that are fillable.
+     * Create a new instance for query.
      *
-     * @var array
+     * @return \Illuminate\Database\Query\Builder
      */
-    public $fillable = [
-        'key',
-        'value',
-        'visibility',
-    ];
+    public function getQuery()
+    {
+        return $this->getManager()->getRepository()->getQuery()->where('visibility', 'public');
+    }
 }

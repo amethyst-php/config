@@ -103,6 +103,13 @@ return [
     |
     */
     'http' => [
+        'app' => [
+            'enabled'    => true,
+            'controller' => Railken\LaraOre\Http\Controllers\App\ConfigsController::class,
+            'router'     => [
+                'prefix' => '/app/configs',
+            ],
+        ],
         'admin' => [
             'enabled'    => true,
             'controller' => Railken\LaraOre\Http\Controllers\Admin\ConfigsController::class,

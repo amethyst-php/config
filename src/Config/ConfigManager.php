@@ -27,6 +27,7 @@ class ConfigManager extends ModelManager
         Attributes\Value\ValueAttribute::class,
         Attributes\CreatedAt\CreatedAtAttribute::class,
         Attributes\UpdatedAt\UpdatedAtAttribute::class,
+        Attributes\Visibility\VisibilityAttribute::class,
     ];
 
     /**

@@ -23,6 +23,7 @@ class Config extends Model implements EntityContract
     protected $fillable = [
         'key',
         'value',
+        'visibility',
     ];
 
     /**

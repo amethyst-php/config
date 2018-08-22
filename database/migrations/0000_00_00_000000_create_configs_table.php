@@ -16,6 +16,7 @@ class CreateConfigsTable extends Migration
             $table->increments('id');
             $table->text('key');
             $table->text('value');
+            $table->string('visibility');
             $table->timestamps();
         });
     }
