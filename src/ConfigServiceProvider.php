@@ -52,11 +52,11 @@ class ConfigServiceProvider extends ServiceProvider
         Router::group('admin', Arr::get($config, 'router'), function ($router) use ($config) {
             $controller = Arr::get($config, 'controller');
 
-            $router->get('/', ['uses' => $controller.'@index']);
-            $router->post('/', ['uses' => $controller.'@create']);
-            $router->put('/{id}', ['uses' => $controller.'@update']);
-            $router->delete('/{id}', ['uses' => $controller.'@remove']);
-            $router->get('/{id}', ['uses' => $controller.'@show']);
+            $router->get('/', ['as' => 'index', 'uses' => $controller.'@index']);
+            $router->post('/', ['as' => 'create', 'uses' => $controller.'@create']);
+            $router->put('/{id}', ['as' => 'update', 'uses' => $controller.'@update']);
+            $router->delete('/{id}', ['as' => 'remove', 'uses' => $controller.'@remove']);
+            $router->get('/{id}', ['as' => 'show', 'uses' => $controller.'@show']);
         });
 
         $config = Config::get('ore.config.http.app');
@@ -65,9 +65,6 @@ class ConfigServiceProvider extends ServiceProvider
             $controller = Arr::get($config, 'controller');
 
             $router->get('/', ['uses' => $controller.'@index']);
-            $router->post('/', ['uses' => $controller.'@create']);
-            $router->put('/{id}', ['uses' => $controller.'@update']);
-            $router->delete('/{id}', ['uses' => $controller.'@remove']);
             $router->get('/{id}', ['uses' => $controller.'@show']);
         });
     }
