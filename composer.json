@@ -1,5 +1,6 @@
 {
     "name": "railken/lara-ore-config",
+    "description": "A lara-ore package",
     "keywords": ["laravel", "lara-ore", "lara-ore-config", "config"],
     "license": "MIT",
     "require": {

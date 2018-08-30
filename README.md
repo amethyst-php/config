@@ -20,7 +20,7 @@ The package will automatically register itself.
 
 ## Documentation
 
-[Read](docs/index.md)
+[Read](docs/index.md).
 
 ## Testing
 
