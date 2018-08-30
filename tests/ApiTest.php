@@ -3,6 +3,7 @@
 namespace Railken\LaraOre\Config\Tests;
 
 use Illuminate\Support\Facades\Config;
+use Railken\Bag;
 use Railken\LaraOre\Api\Support\Testing\TestableTrait;
 use Railken\LaraOre\Config\ConfigFaker;
 
@@ -34,9 +35,9 @@ class ApiTest extends BaseTest
 
         // GET /
         $response = $this->get($url, []);
-        $this->assertOrPrint($response, 200);
+        $this->assertOrPrint('get', $url, (new Bag()), $response, 200);
         // GET /
         $response = $this->get($url, ['query' => 'id eq 1']);
-        $this->assertOrPrint($response, 200);
+        $this->assertOrPrint('get', $url, (new Bag()), $response, 200);
     }
 }
