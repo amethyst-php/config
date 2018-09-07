@@ -18,7 +18,7 @@ class ApiTest extends BaseTest
      */
     public function getBaseUrl()
     {
-        return Config::get('ore.api.router.prefix').Config::get('ore.config.http.admin.router.prefix');
+        return Config::get('ore.api.http.admin.router.prefix').Config::get('ore.config.http.admin.router.prefix');
     }
 
     /**
@@ -31,7 +31,7 @@ class ApiTest extends BaseTest
 
     public function testApp()
     {
-        $url = Config::get('ore.api.router.prefix').Config::get('ore.config.http.app.router.prefix');
+        $url = Config::get('ore.api.http.app.router.prefix').Config::get('ore.config.http.app.router.prefix');
 
         // GET /
         $response = $this->get($url, []);
