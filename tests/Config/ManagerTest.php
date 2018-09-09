@@ -1,6 +1,6 @@
 <?php
 
-namespace Railken\LaraOre\Config\Tests;
+namespace Railken\LaraOre\Tests\Config;
 
 use Railken\LaraOre\Config\ConfigFaker;
 use Railken\LaraOre\Config\ConfigManager;
