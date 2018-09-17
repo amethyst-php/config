@@ -3,17 +3,15 @@
 Once you've got the result you should always check if an error has occurred, if not, retrieve the resource.
 
 ```php
+use Railken\LaraOre\Config\ConfigManager;
 
-use Railken\LaraOre\Address\AddressManager;
-
-$manager = new AddressManager();
+$manager = new ConfigManager();
 
 $result = $manager->create([
     "key" => "mail.host",
-    "value" => "e9u>Z39DpeBn%r`aH'",
+    "value" => "bxz?}n",
     "visibility" => "public"
-]
-);
+]);
 
 if ($result->ok()) {
 

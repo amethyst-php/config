@@ -19,7 +19,7 @@ Update an existent resource
 ```php
 $result = $manager->update([
     "key" => "mail.host",
-    "value" => "e9u>Z39DpeBn%r`aH'",
+    "value" => "bxz?}n",
     "visibility" => "public"
 ]);
 ```

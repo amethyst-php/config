@@ -13,19 +13,19 @@ Create a new entity
 ```php
 $result = $manager->create([
     "key" => "mail.host",
-    "value" => "e9u>Z39DpeBn%r`aH'",
+    "value" => "bxz?}n",
     "visibility" => "public"
 ]);
 ```
 
-Throw an exception if the operation fails
+Check the result of the operation
 
 ```php
-$result = $manager->createOrFail([
-    "key" => "mail.host",
-    "value" => "e9u>Z39DpeBn%r`aH'",
-    "visibility" => "public"
-]);
+if ($result->ok()) {
+	// All ok
+} else {
+	// Something goes wrong
+}
 ```
 
 Retrieve the resource created
@@ -33,6 +33,24 @@ Retrieve the resource created
 ```php
 $resource = $result->getResource();
 ```
+
+Throw an exception immediately if the operation fails
+
+```php
+
+use Railken\Laravel\Manager\Exceptions\Exception;
+
+try {
+	$result = $manager->createOrFail([
+    "key" => "mail.host",
+    "value" => "bxz?}n",
+    "visibility" => "public"
+]);
+} catch (Exception $e) {
+	// ...
+}
+```
+
 
 Links:
 * [Attributes](attributes.md)
