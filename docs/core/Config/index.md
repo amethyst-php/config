@@ -1,6 +1,6 @@
 ## Config
 
-...
+Overwrite laravel configs
 
 [View model](railken-lara-ore-config/blob/master/src/Config/Config.php)
 
