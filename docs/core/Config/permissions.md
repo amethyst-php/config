@@ -1,4 +1,4 @@
-### Permissions
+## Permissions
 
 | Code                           |
 |--------------------------------|
@@ -12,9 +12,12 @@
 | config.attributes.key.show |
 | config.attributes.value.fill |
 | config.attributes.value.show |
+| config.attributes.visibility.fill |
+| config.attributes.visibility.show |
 | config.attributes.created_at.fill |
 | config.attributes.created_at.show |
 | config.attributes.updated_at.fill |
 | config.attributes.updated_at.show |
-| config.attributes.visibility.fill |
-| config.attributes.visibility.show |
+
+---
+[Back](index.md)

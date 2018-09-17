@@ -12,16 +12,5 @@
 	* [Errors](core/Config/errors.md)
 	* [Permissions](core/Config/permissions.md)
 
-## Managers
-
-
-
-### Config
-
-
-
-
-
-
 
 

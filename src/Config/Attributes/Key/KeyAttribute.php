@@ -32,6 +32,20 @@ class KeyAttribute extends BaseAttribute
     protected $unique = true;
 
     /**
+     * Is the attribute fillable.
+     *
+     * @var bool
+     */
+    protected $fillable = true;
+
+    /**
+     * Describe this attribute.
+     *
+     * @var string
+     */
+    public $comment = "Used as an index to compose the config";
+
+    /**
      * List of all exceptions used in validation.
      *
      * @var array

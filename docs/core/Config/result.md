@@ -1,4 +1,4 @@
-### Result
+## Result
 
 Once you've got the result you should always check if an error has occurred, if not, retrieve the resource.
 
@@ -10,7 +10,7 @@ $manager = new AddressManager();
 
 $result = $manager->create([
     "key" => "mail.host",
-    "value" => "d<8sLG8B",
+    "value" => "&TX\\A/.&u",
     "visibility" => "public"
 ]
 );
@@ -42,3 +42,6 @@ if ($result->ok()) {
 
 }
 ```
+
+---
+[Back](index.md)

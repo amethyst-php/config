@@ -1,4 +1,4 @@
-### Create
+## Create
 
 
 ```php
@@ -8,8 +8,11 @@ $manager = new ConfigManager();
 
 $result = $manager->create([
     "key" => "mail.host",
-    "value" => "d<8sLG8B",
+    "value" => "&TX\\A/.&u",
     "visibility" => "public"
 ]
 );
 ```
+
+---
+[Back](index.md)

@@ -31,6 +31,20 @@ class ValueAttribute extends BaseAttribute
     protected $unique = false;
 
     /**
+     * Is the attribute fillable.
+     *
+     * @var bool
+     */
+    protected $fillable = true;
+
+    /**
+     * Describe this attribute.
+     *
+     * @var string
+     */
+    public $comment = "The effective value";
+
+    /**
      * List of all exceptions used in validation.
      *
      * @var array

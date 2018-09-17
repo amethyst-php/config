@@ -31,6 +31,20 @@ class VisibilityAttribute extends BaseAttribute
     protected $unique = false;
 
     /**
+     * Is the attribute fillable.
+     *
+     * @var bool
+     */
+    protected $fillable = true;
+
+    /**
+     * Describe this attribute.
+     *
+     * @var string
+     */
+    public $comment = "Indicate if the config should be private or public";
+
+    /**
      * List of all exceptions used in validation.
      *
      * @var array

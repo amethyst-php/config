@@ -1,4 +1,4 @@
-### Update
+## Update
 
 ```php
 use Railken\LaraOre\Config\ConfigManager;
@@ -9,10 +9,13 @@ $address = $dm->getRepository()->findOneById(1);
 
 $result = $dm->update([
     "key" => "mail.host",
-    "value" => "d<8sLG8B",
+    "value" => "&TX\\A/.&u",
     "visibility" => "public"
 ]
 );
 
 
 ```
+
+---
+[Back](index.md)

@@ -17,6 +17,13 @@ class ConfigManager extends ModelManager
     public $entity;
 
     /**
+     * Describe this manager.
+     *
+     * @var string
+     */
+    protected $comment = "Overwrite laravel configs";
+
+    /**
      * List of all attributes.
      *
      * @var array
@@ -25,9 +32,9 @@ class ConfigManager extends ModelManager
         Attributes\Id\IdAttribute::class,
         Attributes\Key\KeyAttribute::class,
         Attributes\Value\ValueAttribute::class,
+        Attributes\Visibility\VisibilityAttribute::class,
         Attributes\CreatedAt\CreatedAtAttribute::class,
         Attributes\UpdatedAt\UpdatedAtAttribute::class,
-        Attributes\Visibility\VisibilityAttribute::class,
     ];
 
     /**
