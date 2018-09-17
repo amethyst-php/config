@@ -1,5 +1,7 @@
 ## Permissions
 
+List of all permissions.
+
 | Code                           |
 |--------------------------------|
 | config.create |

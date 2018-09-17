@@ -1,16 +1,17 @@
 ## Remove 
 
-Sample code
+Define a new instance of the [Manager](https://github.com/railken/lara-ore-config/blob/master/src/Config/ConfigManager.php))
 
 ```php
-
 use Railken\LaraOre\Config\ConfigManager;
 
 $manager = new ConfigManager();
+```
 
-$resource = $manager->getRepository()->findOneById(1);
+```php
+$entity = $manager->getRepository()->findOneById(1);
 
-$result = $manager->remove($resource);
+$result = $manager->remove($entity);
 ```
 
 Links:

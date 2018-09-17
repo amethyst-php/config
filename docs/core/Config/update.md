@@ -1,6 +1,6 @@
 ## Update 
 
-Define a new instance of the manager
+Define a new instance of the [Manager](https://github.com/railken/lara-ore-config/blob/master/src/Config/ConfigManager.php))
 
 ```php
 use Railken\LaraOre\Config\ConfigManager;
@@ -8,18 +8,19 @@ use Railken\LaraOre\Config\ConfigManager;
 $manager = new ConfigManager();
 ```
 
-Retrieve a resource using the repository
+Retrieve an [entity](https://github.com/railken/lara-ore-config/blob/master/src/Config/Config.php) using the [repository](https://github.com/railken/lara-ore-config/blob/master/src/Config/ConfigRepository.php))
+
 
 ```php
-$resource = $manager->getRepository()->findOneById(1);
+$entity = $manager->getRepository()->findOneById(1);
 ```
 
-Update an existent resource
+Update an existent [resource](https://github.com/railken/lara-ore-config/blob/master/src/Config/Config.php))
 
 ```php
 $result = $manager->update([
     "key" => "mail.host",
-    "value" => "bxz?}n",
+    "value" => "8yj'ECg",
     "visibility" => "public"
 ]);
 ```

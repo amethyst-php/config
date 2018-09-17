@@ -1,5 +1,7 @@
 ## Attributes
 
+List of all attributes
+
 | Name | Fillable | Required | Unique | Default | Comment |
 |------|----------|----------|--------|---------|---------|
 | id | No | No | No |  | Indentify the entity |

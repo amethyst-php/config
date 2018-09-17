@@ -1,6 +1,6 @@
 ## Create
 
-Define a new instance of the manager
+Define a new instance of the [Manager](manager.md)
 
 ```php
 use Railken\LaraOre\Config\ConfigManager;
@@ -8,12 +8,12 @@ use Railken\LaraOre\Config\ConfigManager;
 $manager = new ConfigManager();
 ```
 
-Create a new entity
+Create a new [entity](model.md)
 
 ```php
 $result = $manager->create([
     "key" => "mail.host",
-    "value" => "bxz?}n",
+    "value" => "8yj'ECg",
     "visibility" => "public"
 ]);
 ```
@@ -22,16 +22,17 @@ Check the result of the operation
 
 ```php
 if ($result->ok()) {
-	// All ok
+    // All ok
 } else {
-	// Something goes wrong
+    // Something goes wrong
 }
 ```
 
-Retrieve the resource created
+Retrieve an [entity](model.md) using the [repository](repository.md)
+
 
 ```php
-$resource = $result->getResource();
+$entity = $result->getResource();
 ```
 
 Throw an exception immediately if the operation fails
@@ -41,13 +42,13 @@ Throw an exception immediately if the operation fails
 use Railken\Laravel\Manager\Exceptions\Exception;
 
 try {
-	$result = $manager->createOrFail([
+    $result = $manager->createOrFail([
     "key" => "mail.host",
-    "value" => "bxz?}n",
+    "value" => "8yj'ECg",
     "visibility" => "public"
 ]);
 } catch (Exception $e) {
-	// ...
+    // ...
 }
 ```
 

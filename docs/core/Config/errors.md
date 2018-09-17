@@ -1,5 +1,7 @@
 ### Errors
 
+List of all errors.
+
 | Code                           | Message                                      |
 |--------------------------------|----------------------------------------------|
 | CONFIG_NOT_AUTHORIZED | You're not authorized to interact with config, missing  permission |

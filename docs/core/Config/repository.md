@@ -1,5 +1,7 @@
 ## Repository
 
+[View source](https://github.com/railken/lara-ore-config/blob/master/src/Config/ConfigRepository.php))
+
 Getting repository instance
 
 ```php
