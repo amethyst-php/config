@@ -1,4 +1,4 @@
-# Config Repository
+### Repository
 
 Getting repository instance
 

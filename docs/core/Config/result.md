@@ -1,16 +1,19 @@
-# Result
+### Result
 
 Once you've got the result you should always check if an error has occurred, if not, retrieve the resource.
 
 ```php
 
-use Railken\LaraOre\Config\ConfigManager;
+use Railken\LaraOre\Address\AddressManager;
 
-$manager = new ConfigManager();
+$manager = new AddressManager();
 
 $result = $manager->create([
-    "value" => "localhost"
-]);
+    "key" => "mail.host",
+    "value" => "d<8sLG8B",
+    "visibility" => "public"
+]
+);
 
 if ($result->ok()) {
 
@@ -30,9 +33,9 @@ if ($result->ok()) {
 
         [0] => Array
             (
-                [code] => CONFIG_KEY_NOT_DEFINED
-                [label] => key
-                [message] => The key is required
+                [code] => FIELD_NOT_DEFINED
+                [label] => field
+                [message] => The field is required
                 [value] =>
             )
     */

@@ -1,32 +1,27 @@
 # Documentation
 
-## Data
+* Managers
+	* [Introduction](core/Config/index.md)
+	* [Create a new entity](core/Config/create.md)
+	* [Update an entity](core/Config/update.md)
+	* [Remove an entity](core/Config/remove.md)
+	* [Performing queries with the Repository](core/Config/repository.md)
+	* [Handle the result](core/Config/result.md)
+	* [Permissions](core/Config/permissions.md)
+	* [Attributes](core/Config/attributes.md)
+	* [Errors](core/Config/errors.md)
+	* [Permissions](core/Config/permissions.md)
 
-In order to access to the data you have three options available: api, manager, commands.
+## Managers
 
-### Api
 
-* [Retrieve configs](api/admin/index.md)
-* [Create an config](api/admin/create.md) 
-* [Update an config](api/admin/update.md)
-* [Retrieve an config](api/admin/show.md)
-* [Delete an config](api/admin/delete.md)
 
-### Manager
+### Config
 
-* [Create a new entity](manager/create.md)
-* [Update an entity](manager/update.md)
-* [Remove an entity](manager/remove.md)
-* [Performing queries with the Repository](manager/repository.md)
-* [Handle the result](manager/result.md)
-* [Permissions](manager/permissions.md)
 
-### Commands
 
-Soon... maybe...
 
-### Common
 
-* [Attributes](common/attributes.md)
-* [Errors](common/errors.md)
-* [Permissions](common/permissions.md)
+
+
+

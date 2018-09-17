@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Railken\LaraOre\Api\Support\Router;
+use Railken\LaraOre\Config\ConfigManager;
+use Railken\LaraOre\Config\ConfigFaker;
 
 class ConfigServiceProvider extends ServiceProvider
 {
@@ -21,9 +23,10 @@ class ConfigServiceProvider extends ServiceProvider
 
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->loadRoutes();
+        $this->loadDocumentation();
 
         config(['ore.managers' => array_merge(Config::get('ore.managers', []), [
-            \Railken\LaraOre\Config\ConfigManager::class,
+            ConfigManager::class,
         ])]);
 
         if (Schema::hasTable(Config::get('ore.config.table'))) {
@@ -39,6 +42,7 @@ class ConfigServiceProvider extends ServiceProvider
     {
         $this->app->register(\Railken\Laravel\Manager\ManagerServiceProvider::class);
         $this->app->register(\Railken\LaraOre\ApiServiceProvider::class);
+        $this->app->register(\Railken\LaraOre\DocumentationGeneratorServiceProvider::class);
         $this->mergeConfigFrom(__DIR__.'/../config/ore.config.php', 'ore.config');
     }
 
@@ -67,5 +71,11 @@ class ConfigServiceProvider extends ServiceProvider
             $router->get('/', ['uses' => $controller.'@index']);
             $router->get('/{id}', ['uses' => $controller.'@show']);
         });
+    }
+
+    public function loadDocumentation()
+    {
+        $this->app->get('ore.doc')
+            ->manager('railken-lara-ore-config', ConfigManager::class, ConfigFaker::class);
     }
 }

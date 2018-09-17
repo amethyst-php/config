@@ -17,7 +17,7 @@ define('LARAVEL_START', microtime(true));
 
 require __DIR__.'/vendor/autoload.php';
 
-class AppTest extends \Railken\LaraOre\Config\Tests\BaseTest
+class AppTest extends \Railken\LaraOre\Tests\Config\BaseTest
 {
     /**
      * Retrieve app.
