@@ -2,7 +2,7 @@
 
 Overwrite laravel configs
 
-[View model](railken-lara-ore-config/blob/master/src/Config/Config.php)
+[View model](railken/lara-ore-config/blob/master/src/Config/Config.php)
 
 * [Create a new entity](create.md)
 * [Update an entity](update.md)
