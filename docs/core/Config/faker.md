@@ -1,6 +1,6 @@
 ## Faker
 
-[View source](https://github.com/railken/lara-ore-config/blob/master/src/Config/ConfigFaker.php))
+[View source](https://github.com/railken/lara-ore-config/blob/master/src/Config/ConfigFaker.php)
 
 The faker can be used for testing or seeding.
 

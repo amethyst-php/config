@@ -9,7 +9,7 @@ $manager = new ConfigManager();
 
 $result = $manager->create([
     "key" => "mail.host",
-    "value" => "8yj'ECg",
+    "value" => "`TXb9O0<t)EsR4K8@=>@",
     "visibility" => "public"
 ]);
 

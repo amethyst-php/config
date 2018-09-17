@@ -13,7 +13,7 @@ Create a new [entity](model.md)
 ```php
 $result = $manager->create([
     "key" => "mail.host",
-    "value" => "8yj'ECg",
+    "value" => "`TXb9O0<t)EsR4K8@=>@",
     "visibility" => "public"
 ]);
 ```
@@ -44,7 +44,7 @@ use Railken\Laravel\Manager\Exceptions\Exception;
 try {
     $result = $manager->createOrFail([
     "key" => "mail.host",
-    "value" => "8yj'ECg",
+    "value" => "`TXb9O0<t)EsR4K8@=>@",
     "visibility" => "public"
 ]);
 } catch (Exception $e) {

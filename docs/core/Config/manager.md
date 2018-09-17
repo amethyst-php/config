@@ -1,6 +1,6 @@
 ##  Manager 
 
-[View source](https://github.com/railken/lara-ore-config/blob/master/src/Config/ConfigManager.php))
+[View source](https://github.com/railken/lara-ore-config/blob/master/src/Config/ConfigManager.php)
 
 The manager is the main class to access and manipulate your model.
 
@@ -14,7 +14,7 @@ The manager is the main class to access and manipulate your model.
 	* [Attributes](attributes.md)
 	* [Errors](errors.md)
 	* [Permissions](permissions.md)
-	
+
 If you wish to extend the modal to add extra features or change the current one, use the config files.
 
 ---

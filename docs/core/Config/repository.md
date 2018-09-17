@@ -1,8 +1,8 @@
 ## Repository
 
-[View source](https://github.com/railken/lara-ore-config/blob/master/src/Config/ConfigRepository.php))
+[View source](https://github.com/railken/lara-ore-config/blob/master/src/Config/ConfigRepository.php)
 
-Getting repository instance
+The repository is the class to perform queries.
 
 ```php
 use Railken\LaraOre\Config\ConfigManager;
