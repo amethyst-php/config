@@ -76,6 +76,6 @@ class ConfigServiceProvider extends ServiceProvider
     public function loadDocumentation()
     {
         $this->app->get('ore.doc')
-            ->manager('railken-lara-ore-config', ConfigManager::class, ConfigFaker::class);
+            ->manager('railken/lara-ore-config', ConfigManager::class, ConfigFaker::class);
     }
 }

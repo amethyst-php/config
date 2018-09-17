@@ -10,7 +10,7 @@ $manager = new AddressManager();
 
 $result = $manager->create([
     "key" => "mail.host",
-    "value" => "&TX\\A/.&u",
+    "value" => "e9u>Z39DpeBn%r`aH'",
     "visibility" => "public"
 ]
 );
