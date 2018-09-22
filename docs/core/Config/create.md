@@ -3,7 +3,7 @@
 Define a new instance of the [Manager](manager.md)
 
 ```php
-use Railken\LaraOre\Config\ConfigManager;
+use Railken\LaraOre\Core\Config\ConfigManager;
 
 $manager = new ConfigManager();
 ```
@@ -13,7 +13,7 @@ Create a new [entity](model.md)
 ```php
 $result = $manager->create([
     "key" => "mail.host",
-    "value" => "`TXb9O0<t)EsR4K8@=>@",
+    "value" => "YmqQsKdXoo5_v^`qMLJ)",
     "visibility" => "public"
 ]);
 ```
@@ -44,7 +44,7 @@ use Railken\Laravel\Manager\Exceptions\Exception;
 try {
     $result = $manager->createOrFail([
     "key" => "mail.host",
-    "value" => "`TXb9O0<t)EsR4K8@=>@",
+    "value" => "YmqQsKdXoo5_v^`qMLJ)",
     "visibility" => "public"
 ]);
 } catch (Exception $e) {

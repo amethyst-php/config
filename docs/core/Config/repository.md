@@ -5,7 +5,7 @@
 The repository is the class to perform queries.
 
 ```php
-use Railken\LaraOre\Config\ConfigManager;
+use Railken\LaraOre\Core\Config\ConfigManager;
 
 $manager = new ConfigManager();
 

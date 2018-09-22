@@ -5,7 +5,7 @@
 The serializer is used to serialize an entity, you can retrieve it from the manager.
 
 ```php
-use Railken\LaraOre\Config\ConfigManager;
+use Railken\LaraOre\Core\Config\ConfigManager;
 
 $manager = new ConfigManager();
 

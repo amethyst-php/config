@@ -23,7 +23,7 @@ You can use whatever permission-library suits you to implement this method
 
 ```php
 
-use Railken\LaraOre\Config\ConfigManager;
+use Railken\LaraOre\Core\Config\ConfigManager;
 
 $manager = new ConfigManager($user);
 

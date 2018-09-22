@@ -7,8 +7,8 @@ use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Railken\LaraOre\Api\Support\Router;
-use Railken\LaraOre\Config\ConfigManager;
-use Railken\LaraOre\Config\ConfigFaker;
+use Railken\LaraOre\Core\Config\ConfigFaker;
+use Railken\LaraOre\Core\Config\ConfigManager;
 
 class ConfigServiceProvider extends ServiceProvider
 {
@@ -30,7 +30,7 @@ class ConfigServiceProvider extends ServiceProvider
         ])]);
 
         if (Schema::hasTable(Config::get('ore.config.table'))) {
-            $manager = new \Railken\LaraOre\Config\ConfigManager();
+            $manager = new \Railken\LaraOre\Core\Config\ConfigManager();
             $manager->loadConfig();
         }
     }

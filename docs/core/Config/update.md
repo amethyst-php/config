@@ -3,7 +3,7 @@
 Define a new instance of the [Manager](https://github.com/railken/lara-ore-config/blob/master/src/Config/ConfigManager.php)
 
 ```php
-use Railken\LaraOre\Config\ConfigManager;
+use Railken\LaraOre\Core\Config\ConfigManager;
 
 $manager = new ConfigManager();
 ```
@@ -20,7 +20,7 @@ Update an existent [resource](https://github.com/railken/lara-ore-config/blob/ma
 ```php
 $result = $manager->update([
     "key" => "mail.host",
-    "value" => "`TXb9O0<t)EsR4K8@=>@",
+    "value" => "YmqQsKdXoo5_v^`qMLJ)",
     "visibility" => "public"
 ]);
 ```

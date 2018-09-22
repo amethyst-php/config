@@ -21,7 +21,7 @@ return [
     | The attribute $fillable is already updated by the config 'attributes'.
     |
     */
-    'entity' => Railken\LaraOre\Config\Config::class,
+    'entity' => Railken\LaraOre\Core\Config\Config::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -33,7 +33,7 @@ return [
     | The attribute $attributes is already updated by the config 'attributes'.
     |
     */
-    'manager' => Railken\LaraOre\Config\ConfigManager::class,
+    'manager' => Railken\LaraOre\Core\Config\ConfigManager::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -44,7 +44,7 @@ return [
     | Change this if you have to add more complex queries (e.g. ::findOneBy).
     |
     */
-    'repository' => Railken\LaraOre\Config\ConfigRepository::class,
+    'repository' => Railken\LaraOre\Core\Config\ConfigRepository::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -56,7 +56,7 @@ return [
     | All the attributes of the manager are already included in the serializer.
     |
     */
-    'serializer' => Railken\LaraOre\Config\ConfigSerializer::class,
+    'serializer' => Railken\LaraOre\Core\Config\ConfigSerializer::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -68,7 +68,7 @@ return [
     | A validation handled by the single attributes is always preferred to this.
     |
     */
-    'validator' => Railken\LaraOre\Config\ConfigValidator::class,
+    'validator' => Railken\LaraOre\Core\Config\ConfigValidator::class,
 
     /*
     |--------------------------------------------------------------------------
@@ -79,7 +79,7 @@ return [
     | Change this if you have to add more complex authorization.
     |
     */
-    'authorizer' => Railken\LaraOre\Config\ConfigAuthorizer::class,
+    'authorizer' => Railken\LaraOre\Core\Config\ConfigAuthorizer::class,
 
     /*
     |--------------------------------------------------------------------------
