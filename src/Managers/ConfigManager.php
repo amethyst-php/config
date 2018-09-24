@@ -2,15 +2,16 @@
 
 namespace Railken\Amethyst\Managers;
 
-use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Config as ConfigFacade;
+use Railken\Amethyst\Models\Config;
 use Railken\Lem\Attributes;
 use Railken\Lem\Manager;
 
 /**
- * @method \Railken\Amethyst\Repository getRepository()
- * @method \Railken\Amethyst\Validator  getValidator()
- * @method \Railken\Amethyst\Serializer getSerializer()
- * @method \Railken\Amethyst\Authorizer getAuthorizer()
+ * @method \Railken\Amethyst\Repositories\ConfigRepository getRepository()
+ * @method \Railken\Amethyst\Validators\ConfigValidator    getValidator()
+ * @method \Railken\Amethyst\Serializers\ConfigSerializer  getSerializer()
+ * @method \Railken\Amethyst\Authorizers\ConfigAuthorizer  getAuthorizer()
  */
 class ConfigManager extends Manager
 {
@@ -26,7 +27,7 @@ class ConfigManager extends Manager
      */
     public function registerClasses()
     {
-        return Config::get('amethyst.config');
+        return ConfigFacade::get('amethyst.config');
     }
 
     /**
@@ -36,8 +37,8 @@ class ConfigManager extends Manager
     {
         $configs = $this->getRepository()->findToLoad();
 
-        $configs = $configs->mapWithKeys(function ($config, $key) {
-            return [$config->resolveKey($config->key) => $config->value];
+        $configs = $configs->mapWithKeys(function (Config $config, $key) {
+            return [$config->key => $config->value];
         })->toArray();
 
         config($configs);

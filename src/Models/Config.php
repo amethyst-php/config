@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config as ConfigFacade;
 use Railken\Lem\Contracts\EntityContract;
 
+/**
+ * @property string $key
+ * @property string $value
+ * @property string $visibility
+ */
 class Config extends Model implements EntityContract
 {
     /**
@@ -36,10 +41,5 @@ class Config extends Model implements EntityContract
         parent::__construct($attributes);
         $this->table = ConfigFacade::get('amethyst.config.table');
         $this->fillable = array_merge($this->fillable, array_keys(ConfigFacade::get('amethyst.config.attributes')));
-    }
-
-    public function resolveKey($key)
-    {
-        return $key;
     }
 }
