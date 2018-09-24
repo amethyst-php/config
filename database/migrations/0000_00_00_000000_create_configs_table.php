@@ -12,9 +12,9 @@ class CreateConfigsTable extends Migration
      */
     public function up()
     {
-        Schema::create(Config::get('ore.config.table'), function (Blueprint $table) {
+        Schema::create(Config::get('amethyst.config.table'), function (Blueprint $table) {
             $table->increments('id');
-            $table->text('key');
+            $table->string('key')->unique();
             $table->text('value');
             $table->string('visibility');
             $table->timestamps();
@@ -26,6 +26,6 @@ class CreateConfigsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(Config::get('ore.config.table'));
+        Schema::dropIfExists(Config::get('amethyst.config.table'));
     }
 }

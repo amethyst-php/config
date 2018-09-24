@@ -1,9 +1,9 @@
 <?php
 
-namespace Railken\LaraOre\Http\Controllers\Admin;
+namespace Railken\Amethyst\Http\Controllers\Admin;
 
-use Railken\LaraOre\Api\Http\Controllers\RestConfigurableController;
-use Railken\LaraOre\Api\Http\Controllers\Traits as RestTraits;
+use Railken\Amethyst\Api\Http\Controllers\RestConfigurableController;
+use Railken\Amethyst\Api\Http\Controllers\Traits as RestTraits;
 
 class ConfigsController extends RestConfigurableController
 {
@@ -18,7 +18,7 @@ class ConfigsController extends RestConfigurableController
      *
      * @var string
      */
-    public $config = 'ore.config';
+    public $config = 'amethyst.config';
 
     /**
      * The attributes that are queryable.

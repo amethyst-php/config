@@ -1,6 +1,6 @@
 <?php
 
-namespace Railken\LaraOre\Tests;
+namespace Railken\Amethyst\Tests;
 
 abstract class BaseTest extends \Orchestra\Testbench\TestCase
 {
@@ -20,7 +20,7 @@ abstract class BaseTest extends \Orchestra\Testbench\TestCase
     protected function getPackageProviders($app)
     {
         return [
-            \Railken\LaraOre\ConfigServiceProvider::class,
+            \Railken\Amethyst\Providers\ConfigServiceProvider::class,
         ];
     }
 }

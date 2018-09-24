@@ -1,11 +1,11 @@
 <?php
 
-namespace Railken\LaraOre\Tests\Http\Admin;
+namespace Railken\Amethyst\Tests\Http\Admin;
 
 use Illuminate\Support\Facades\Config;
-use Railken\LaraOre\Api\Support\Testing\TestableBaseTrait;
-use Railken\LaraOre\Core\Config\ConfigFaker;
-use Railken\LaraOre\Tests\BaseTest;
+use Railken\Amethyst\Api\Support\Testing\TestableBaseTrait;
+use Railken\Amethyst\Fakers\ConfigFaker;
+use Railken\Amethyst\Tests\BaseTest;
 
 class ConfigTest extends BaseTest
 {
@@ -30,5 +30,5 @@ class ConfigTest extends BaseTest
      *
      * @var string
      */
-    protected $config = 'ore.config';
+    protected $config = 'amethyst.config';
 }
