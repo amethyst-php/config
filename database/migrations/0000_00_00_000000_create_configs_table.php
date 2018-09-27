@@ -12,7 +12,7 @@ class CreateConfigsTable extends Migration
      */
     public function up()
     {
-        Schema::create(Config::get('amethyst.config.table'), function (Blueprint $table) {
+        Schema::create(Config::get('amethyst.config.managers.config.table'), function (Blueprint $table) {
             $table->increments('id');
             $table->string('key')->unique();
             $table->text('value');
@@ -26,6 +26,6 @@ class CreateConfigsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists(Config::get('amethyst.config.table'));
+        Schema::dropIfExists(Config::get('amethyst.config.managers.config.table'));
     }
 }

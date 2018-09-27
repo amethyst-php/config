@@ -2,33 +2,20 @@
 
 namespace Railken\Amethyst\Http\Controllers\App;
 
-use Railken\Amethyst\Api\Http\Controllers\RestConfigurableController;
+use Railken\Amethyst\Api\Http\Controllers\RestManagerController;
 use Railken\Amethyst\Api\Http\Controllers\Traits as RestTraits;
+use Railken\Amethyst\Managers\ConfigManager;
 
-class ConfigsController extends RestConfigurableController
+class ConfigsController extends RestManagerController
 {
     use RestTraits\RestIndexTrait;
 
     /**
-     * The config path.
+     * The class of the manager.
      *
      * @var string
      */
-    public $config = 'amethyst.config';
-
-    /**
-     * The attributes that are queryable.
-     *
-     * @var array
-     */
-    public $queryable = [
-        'id',
-        'key',
-        'value',
-        'visibility',
-        'created_at',
-        'updated_at',
-    ];
+    public $class = ConfigManager::class;
 
     /**
      * Create a new instance for query.

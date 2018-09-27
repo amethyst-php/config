@@ -31,7 +31,7 @@ class ConfigTest extends BaseTest
      *
      * @var string
      */
-    protected $config = 'amethyst.config';
+    protected $config = 'amethyst.config.http.app.config';
 
     /**
      * List of routes.

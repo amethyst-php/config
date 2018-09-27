@@ -39,7 +39,7 @@ class Config extends Model implements EntityContract
     public function __construct(array $attributes = [])
     {
         parent::__construct($attributes);
-        $this->table = ConfigFacade::get('amethyst.config.table');
-        $this->fillable = array_merge($this->fillable, array_keys(ConfigFacade::get('amethyst.config.attributes')));
+        $this->table = ConfigFacade::get('amethyst.config.managers.config.table');
+        $this->fillable = array_merge($this->fillable, array_keys(ConfigFacade::get('amethyst.config.managers.config.attributes', [])));
     }
 }

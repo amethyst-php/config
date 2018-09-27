@@ -43,7 +43,7 @@ class ConfigServiceProvider extends ServiceProvider
      */
     public function loadRoutes()
     {
-        $config = Config::get('amethyst.config.http.admin');
+        $config = Config::get('amethyst.config.http.admin.config');
 
         Router::group('admin', Arr::get($config, 'router'), function ($router) use ($config) {
             $controller = Arr::get($config, 'controller');
@@ -55,7 +55,7 @@ class ConfigServiceProvider extends ServiceProvider
             $router->get('/{id}', ['as' => 'show', 'uses' => $controller.'@show']);
         });
 
-        $config = Config::get('amethyst.config.http.app');
+        $config = Config::get('amethyst.config.http.app.config');
 
         Router::group('app', Arr::get($config, 'router'), function ($router) use ($config) {
             $controller = Arr::get($config, 'controller');

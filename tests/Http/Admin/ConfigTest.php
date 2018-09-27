@@ -30,5 +30,5 @@ class ConfigTest extends BaseTest
      *
      * @var string
      */
-    protected $config = 'amethyst.config';
+    protected $config = 'amethyst.config.http.admin.config';
 }
