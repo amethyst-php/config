@@ -5,9 +5,7 @@
     "license": "MIT",
     "require": {
         "php": ">=7.1",
-        "fzaninotto/faker": "^1.7",
-        "railken/bag": "^1.2",
-        "railken/amethyst-api": "dev-master"
+        "railken/amethyst-common": "^0.1"
     },
     "require-dev": {
         "phpstan/phpstan": "^0.10",

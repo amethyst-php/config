@@ -4,6 +4,7 @@ namespace Railken\Amethyst\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Config as ConfigFacade;
+use Railken\Amethyst\Schemas\ConfigSchema;
 use Railken\Lem\Contracts\EntityContract;
 
 /**
@@ -21,17 +22,6 @@ class Config extends Model implements EntityContract
     protected $table;
 
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $fillable = [
-        'key',
-        'value',
-        'visibility',
-    ];
-
-    /**
      * Creates a new instance of the model.
      *
      * @param array $attributes
@@ -40,6 +30,10 @@ class Config extends Model implements EntityContract
     {
         parent::__construct($attributes);
         $this->table = ConfigFacade::get('amethyst.config.managers.config.table');
-        $this->fillable = array_merge($this->fillable, array_keys(ConfigFacade::get('amethyst.config.managers.config.attributes', [])));
+        $this->fillable = collect((new ConfigSchema())->getAttributes())->filter(function ($attribute) {
+            return $attribute->getFillable();
+        })->map(function ($attribute) {
+            return $attribute->getName();
+        })->toArray();
     }
 }
