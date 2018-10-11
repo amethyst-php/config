@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Config as ConfigFacade;
 use Railken\Amethyst\Models\Config;
 use Railken\Lem\Manager;
 
+/**
+ * @method \Railken\Amethyst\Repositories\ConfigRepository getRepository()
+ */
 class ConfigManager extends Manager
 {
     /**
