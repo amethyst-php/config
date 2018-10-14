@@ -2,7 +2,7 @@
 
 namespace Railken\Amethyst\Managers;
 
-use Illuminate\Support\Facades\Config as ConfigFacade;
+use Railken\Amethyst\Common\ConfigurableManager;
 use Railken\Amethyst\Models\Config;
 use Railken\Lem\Manager;
 
@@ -11,20 +11,12 @@ use Railken\Lem\Manager;
  */
 class ConfigManager extends Manager
 {
-    /**
-     * Describe this manager.
-     *
-     * @var string
-     */
-    public $comment = '...';
+    use ConfigurableManager;
 
     /**
-     * Register Classes.
+     * @var string
      */
-    public function registerClasses()
-    {
-        return ConfigFacade::get('amethyst.config.managers.config');
-    }
+    protected $config = 'amethyst.config.data.config';
 
     /**
      * Load configs.

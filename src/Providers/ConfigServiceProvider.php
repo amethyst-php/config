@@ -21,7 +21,7 @@ class ConfigServiceProvider extends CommonServiceProvider
     {
         parent::boot();
 
-        if (Schema::hasTable(Config::get('amethyst.config.managers.config.table'))) {
+        if (Schema::hasTable(Config::get('amethyst.config.data.config.table'))) {
             $manager = new ConfigManager();
             $manager->loadConfig();
         }
