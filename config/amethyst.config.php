@@ -19,6 +19,8 @@ return [
             'serializer' => Railken\Amethyst\Serializers\ConfigSerializer::class,
             'validator'  => Railken\Amethyst\Validators\ConfigValidator::class,
             'authorizer' => Railken\Amethyst\Authorizers\ConfigAuthorizer::class,
+            'faker'      => Railken\Amethyst\Authorizers\ConfigFaker::class,
+            'manager'    => Railken\Amethyst\Authorizers\ConfigManager::class,
         ],
     ],
 
