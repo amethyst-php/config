@@ -2,7 +2,6 @@
 
 namespace Railken\Amethyst\Tests\Http\Admin;
 
-use Illuminate\Support\Facades\Config;
 use Railken\Amethyst\Api\Support\Testing\TestableBaseTrait;
 use Railken\Amethyst\Fakers\ConfigFaker;
 use Railken\Amethyst\Tests\BaseTest;
@@ -26,9 +25,9 @@ class ConfigTest extends BaseTest
     protected $group = 'admin';
 
     /**
-     * Base path config.
+     * Route name.
      *
      * @var string
      */
-    protected $config = 'amethyst.config.http.admin.config';
+    protected $route = 'admin.config';
 }

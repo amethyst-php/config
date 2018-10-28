@@ -27,20 +27,11 @@ class ConfigTest extends BaseTest
     protected $group = 'app';
 
     /**
-     * Base path config.
+     * Route name.
      *
      * @var string
      */
-    protected $config = 'amethyst.config.http.app.config';
-
-    /**
-     * List of routes.
-     *
-     * @param array
-     */
-    protected $routes = [
-        'index',
-    ];
+    protected $route = 'app.config';
 
     /**
      * Setup the test environment.
