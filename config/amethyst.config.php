@@ -35,21 +35,21 @@ return [
     'http' => [
         'admin' => [
             'config' => [
-                'enabled'     => true,
-                'controller'  => Railken\Amethyst\Http\Controllers\Admin\ConfigsController::class,
-                'router'      => [
-                    'as'        => 'config.',
-                    'prefix'    => '/configs',
+                'enabled'    => true,
+                'controller' => Railken\Amethyst\Http\Controllers\Admin\ConfigsController::class,
+                'router'     => [
+                    'as'     => 'config.',
+                    'prefix' => '/configs',
                 ],
             ],
         ],
         'app' => [
             'config' => [
-                'enabled'     => true,
-                'controller'  => Railken\Amethyst\Http\Controllers\App\ConfigsController::class,
-                'router'      => [
-                    'as'        => 'config.',
-                    'prefix'    => '/configs',
+                'enabled'    => true,
+                'controller' => Railken\Amethyst\Http\Controllers\App\ConfigsController::class,
+                'router'     => [
+                    'as'     => 'config.',
+                    'prefix' => '/configs',
                 ],
             ],
         ],
