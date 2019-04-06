@@ -17,4 +17,4 @@ return [
             'description' => 'Indicate wheter or not this config should be visible in public. If public this key will be accessible through API and anyone will be able to see it. If private the value will be available only within the system'
         ]
     ]
-]
+];
