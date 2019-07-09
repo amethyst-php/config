@@ -1,11 +1,11 @@
 <?php
 
-namespace Railken\Amethyst\Providers;
+namespace Amethyst\Providers;
 
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Schema;
-use Railken\Amethyst\Common\CommonServiceProvider;
-use Railken\Amethyst\Managers\ConfigManager;
+use Amethyst\Common\CommonServiceProvider;
+use Amethyst\Managers\ConfigManager;
 
 class ConfigServiceProvider extends CommonServiceProvider
 {

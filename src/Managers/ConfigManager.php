@@ -1,13 +1,13 @@
 <?php
 
-namespace Railken\Amethyst\Managers;
+namespace Amethyst\Managers;
 
-use Railken\Amethyst\Common\ConfigurableManager;
-use Railken\Amethyst\Models\Config;
+use Amethyst\Common\ConfigurableManager;
+use Amethyst\Models\Config;
 use Railken\Lem\Manager;
 
 /**
- * @method \Railken\Amethyst\Repositories\ConfigRepository getRepository()
+ * @method \Amethyst\Repositories\ConfigRepository getRepository()
  */
 class ConfigManager extends Manager
 {

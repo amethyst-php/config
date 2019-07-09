@@ -1,12 +1,12 @@
 <?php
 
-namespace Railken\Amethyst\Tests\Http\App;
+namespace Amethyst\Tests\Http\App;
 
 use Illuminate\Support\Facades\Config;
-use Railken\Amethyst\Api\Support\Testing\TestableBaseTrait;
-use Railken\Amethyst\Fakers\ConfigFaker;
-use Railken\Amethyst\Managers\ConfigManager;
-use Railken\Amethyst\Tests\BaseTest;
+use Amethyst\Api\Support\Testing\TestableBaseTrait;
+use Amethyst\Fakers\ConfigFaker;
+use Amethyst\Managers\ConfigManager;
+use Amethyst\Tests\BaseTest;
 
 class ConfigTest extends BaseTest
 {

@@ -13,14 +13,14 @@ return [
         'config' => [
             'table'      => 'amethyst_configs',
             'comment'    => 'Persist laravel configs into the database',
-            'model'      => Railken\Amethyst\Models\Config::class,
-            'schema'     => Railken\Amethyst\Schemas\ConfigSchema::class,
-            'repository' => Railken\Amethyst\Repositories\ConfigRepository::class,
-            'serializer' => Railken\Amethyst\Serializers\ConfigSerializer::class,
-            'validator'  => Railken\Amethyst\Validators\ConfigValidator::class,
-            'authorizer' => Railken\Amethyst\Authorizers\ConfigAuthorizer::class,
-            'faker'      => Railken\Amethyst\Fakers\ConfigFaker::class,
-            'manager'    => Railken\Amethyst\Managers\ConfigManager::class,
+            'model'      => Amethyst\Models\Config::class,
+            'schema'     => Amethyst\Schemas\ConfigSchema::class,
+            'repository' => Amethyst\Repositories\ConfigRepository::class,
+            'serializer' => Amethyst\Serializers\ConfigSerializer::class,
+            'validator'  => Amethyst\Validators\ConfigValidator::class,
+            'authorizer' => Amethyst\Authorizers\ConfigAuthorizer::class,
+            'faker'      => Amethyst\Fakers\ConfigFaker::class,
+            'manager'    => Amethyst\Managers\ConfigManager::class,
         ],
     ],
 
@@ -36,7 +36,7 @@ return [
         'admin' => [
             'config' => [
                 'enabled'    => true,
-                'controller' => Railken\Amethyst\Http\Controllers\Admin\ConfigsController::class,
+                'controller' => Amethyst\Http\Controllers\Admin\ConfigsController::class,
                 'router'     => [
                     'as'     => 'config.',
                     'prefix' => '/configs',
@@ -46,7 +46,7 @@ return [
         'app' => [
             'config' => [
                 'enabled'    => true,
-                'controller' => Railken\Amethyst\Http\Controllers\App\ConfigsController::class,
+                'controller' => Amethyst\Http\Controllers\App\ConfigsController::class,
                 'router'     => [
                     'as'     => 'config.',
                     'prefix' => '/configs',

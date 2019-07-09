@@ -1,11 +1,11 @@
 {
-    "name": "railken/amethyst-config",
+    "name": "amethyst/config",
     "description": "Amethyst package",
     "keywords": ["laravel", "amethyst", "amethyst-config", "config"],
     "license": "MIT",
     "require": {
         "php": ">=7.1",
-        "railken/amethyst-common": "^0.1"
+        "amethyst/common": "^0.1"
     },
     "require-dev": {
         "phpunit/phpunit": "~7.1",
@@ -13,18 +13,18 @@
     },
     "autoload": {
         "psr-4" : {
-            "Railken\\Amethyst\\" : "src/"
+            "Amethyst\\" : "src/"
         }
     },
     "autoload-dev": {
         "psr-4": { 
-            "Railken\\Amethyst\\Tests\\": "tests/" 
+            "Amethyst\\Tests\\": "tests/" 
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Railken\\Amethyst\\Providers\\ConfigServiceProvider"
+                "Amethyst\\Providers\\ConfigServiceProvider"
             ]
         }
     }

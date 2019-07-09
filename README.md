@@ -1,8 +1,8 @@
 # amethyst-config
 
-[![Build Status](https://travis-ci.org/railken/amethyst-config.svg?branch=master)](https://travis-ci.org/railken/amethyst-config)
+[![Build Status](https://travis-ci.org/amethyst-php/config.svg?branch=master)](https://travis-ci.org/amethyst-php/config)
 
-[Amethyst](https://github.com/railken/amethyst) package
+[Amethyst](https://github.com/amethyst-php/amethyst) package
 
 # Requirements
 
@@ -13,7 +13,7 @@ PHP 7.1 and later.
 You can install it via [Composer](https://getcomposer.org/) by typing the following command:
 
 ```bash
-composer require railken/amethyst-config
+composer require amethyst/config
 ```
 
 The package will automatically register itself.

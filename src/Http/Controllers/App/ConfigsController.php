@@ -1,10 +1,10 @@
 <?php
 
-namespace Railken\Amethyst\Http\Controllers\App;
+namespace Amethyst\Http\Controllers\App;
 
-use Railken\Amethyst\Api\Http\Controllers\RestManagerController;
-use Railken\Amethyst\Api\Http\Controllers\Traits as RestTraits;
-use Railken\Amethyst\Managers\ConfigManager;
+use Amethyst\Api\Http\Controllers\RestManagerController;
+use Amethyst\Api\Http\Controllers\Traits as RestTraits;
+use Amethyst\Managers\ConfigManager;
 
 class ConfigsController extends RestManagerController
 {
