@@ -2,11 +2,11 @@
 
 namespace Amethyst\Tests\Http\App;
 
-use Illuminate\Support\Facades\Config;
 use Amethyst\Api\Support\Testing\TestableBaseTrait;
 use Amethyst\Fakers\ConfigFaker;
 use Amethyst\Managers\ConfigManager;
 use Amethyst\Tests\BaseTest;
+use Illuminate\Support\Facades\Config;
 
 class ConfigTest extends BaseTest
 {

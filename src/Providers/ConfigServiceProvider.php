@@ -2,10 +2,10 @@
 
 namespace Amethyst\Providers;
 
-use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\Schema;
 use Amethyst\Common\CommonServiceProvider;
 use Amethyst\Managers\ConfigManager;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Schema;
 
 class ConfigServiceProvider extends CommonServiceProvider
 {
