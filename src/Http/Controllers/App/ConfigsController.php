@@ -19,8 +19,6 @@ class ConfigsController extends RestManagerController
 
     /**
      * Create a new instance for query.
-     *
-     * @return \Illuminate\Database\Query\Builder
      */
     public function getQuery()
     {
