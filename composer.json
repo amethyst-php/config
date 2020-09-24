@@ -1,6 +1,6 @@
 {
     "name": "amethyst/config",
-    "description": "Amethyst package",
+    "description": "Customize Laravel configuration using the database",
     "keywords": ["laravel", "amethyst", "amethyst-config", "config"],
     "license": "MIT",
     "require": {
