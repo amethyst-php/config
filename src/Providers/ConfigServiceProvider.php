@@ -2,14 +2,14 @@
 
 namespace Amethyst\Providers;
 
-use Amethyst\Core\Providers\CommonServiceProvider;
 use Amethyst\Contracts\ConfigLoaderContract;
-use Amethyst\Services\ConfigLoader;
+use Amethyst\Core\Providers\CommonServiceProvider;
 use Amethyst\Models\Config;
 use Amethyst\Observers\ConfigObserver;
+use Amethyst\Services\ConfigLoader;
 
 class ConfigServiceProvider extends CommonServiceProvider
-{   
+{
     /**
      * @inherit
      */

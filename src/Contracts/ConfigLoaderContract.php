@@ -2,11 +2,10 @@
 
 namespace Amethyst\Contracts;
 
-
 interface ConfigLoaderContract
 {
-	/**
-	 * Boot the service
-	 */
-	public function boot();
+    /**
+     * Boot the service.
+     */
+    public function boot();
 }

@@ -3,7 +3,6 @@
 namespace Amethyst\Managers;
 
 use Amethyst\Core\ConfigurableManager;
-use Amethyst\Models\Config;
 use Railken\Lem\Manager;
 
 /**

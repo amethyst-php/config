@@ -6,14 +6,14 @@ use Amethyst\Contracts\ConfigLoaderContract;
 use Amethyst\Models\Config;
 
 class ConfigObserver
-{   
+{
     /**
      * @var Container
      */
     protected $configLoader;
 
     /**
-     * Create a new instance
+     * Create a new instance.
      *
      * @param ConfigLoaderContract $configLoader
      */
