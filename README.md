@@ -35,11 +35,11 @@ There are only 2 attributes (`key` and `value`) and the validation is pretty bas
 When the ServiceProvider is booted or when a new record is saved, all records will be merged with the current configuration. This means you can override the current laravel configuration or create your own.
 The attribute `key` works with dot notation too, so key can be also for e.g. `app.name`.
 
-Keep in mind that this is an [Amethyst Package](https://github.com/amethyst-php/amethyst), if you wish to see the full list of available features and customization please check [core](https://github.com/amethyst-php/amethyst-core)
+Keep in mind that this is an [Amethyst Package](https://github.com/amethyst-php/amethyst), if you wish to see the full list of available features and customization please check [core](https://github.com/amethyst-php/core)
 
 ## Api
 
-There are no additional routes in this package, only the default provided by the [core](https://github.com/amethyst-php/amethyst-core).
+There are no additional routes in this package, only the default provided by the [core](https://github.com/amethyst-php/core).
 
 ## Testing
 
