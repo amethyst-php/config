@@ -1,12 +1,14 @@
-# amethyst-config
+# Config
 
-[![Action Status](https://github.com/amethyst-php/config/workflows/test/badge.svg)](https://github.com/amethyst-php/config/actions)
+[![Action Status](https://github.com/amethyst-php/config/workflows/Test/badge.svg)](https://github.com/amethyst-php/config/actions)
+[![Amethyst](https://img.shields.io/badge/Package-Amethyst-7e57c2)](https://github.com/amethyst-php/amethyst)
 
-[Amethyst](https://github.com/amethyst-php/amethyst) package
+Customize your laravel configuration using Eloquent Models. 
 
 # Requirements
 
-PHP 7.1 and later.
+- PHP from 7.1 to 7.4
+- Laravel from 5.8 to 8.x
 
 ## Installation
 
@@ -18,10 +20,30 @@ composer require amethyst/config
 
 The package will automatically register itself.
 
-## Documentation
+## Usage
 
-[Read](docs/index.md).
+A simple usage looks like this
+
+```php
+app('amethyst')->get('config')->createOrFail([
+    'key' => 'app.name',
+    'value' => 'My Application'
+]);
+```
+
+There are only 2 attributes (`key` and `value`) and the validation is pretty basic.
+When the ServiceProvider is booted or when a new record is saved, all records will be merged with the current configuration. This means you can override the current laravel configuration or create your own.
+The attribute `key` works with dot notation too, so key can be also for e.g. `app.name`.
+
+Keep in mind that this is an [Amethyst Package](https://github.com/amethyst-php/amethyst), if you wish to see the full list of available features and customization please check [core](https://github.com/amethyst-php/amethyst-core)
+
+## Api
+
+There are no additional routes in this package, only the default provided by the [core](https://github.com/amethyst-php/amethyst-core).
 
 ## Testing
 
-Configure the .env file before launching `./vendor/bin/phpunit`
+- Clone this repository
+- Copy the default `phpunit.xml.dist` to `phpunit.xml`
+- Change the environment variables as you see fit
+- Launch `./vendor/bin/phpunit`
