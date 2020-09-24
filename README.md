@@ -1,7 +1,7 @@
 # Config
 
-[![Action Status](https://github.com/amethyst-php/config/workflows/Test/badge.svg)](https://github.com/amethyst-php/config/actions)
-[![Amethyst](https://img.shields.io/badge/Package-Amethyst-7e57c2)](https://github.com/amethyst-php/amethyst)
+[![Action Status](https://github.com/amethyst-php/config/workflows/test/badge.svg)](https://github.com/amethyst-php/config/actions)
+[![Amethyst](https://img.shields.io/badge/package-Amethyst-7e57c2)](https://github.com/amethyst-php/amethyst)
 
 Customize Laravel configuration using the database. 
 
