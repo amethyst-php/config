@@ -7,7 +7,7 @@ Customize your laravel configuration using Eloquent Models.
 
 # Requirements
 
-- PHP from 7.1 to 7.4
+- PHP from 7.2 to 7.4
 - Laravel from 5.8 to 8.x
 
 ## Installation
