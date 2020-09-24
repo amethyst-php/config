@@ -3,7 +3,7 @@
 [![Action Status](https://github.com/amethyst-php/config/workflows/Test/badge.svg)](https://github.com/amethyst-php/config/actions)
 [![Amethyst](https://img.shields.io/badge/Package-Amethyst-7e57c2)](https://github.com/amethyst-php/amethyst)
 
-Customize your laravel configuration using Eloquent Models. 
+Customize Laravel configuration using the database. 
 
 # Requirements
 
