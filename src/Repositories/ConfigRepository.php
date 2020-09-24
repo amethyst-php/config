@@ -11,6 +11,5 @@ class ConfigRepository extends Repository
      */
     public function findToLoad()
     {
-        return $this->newQuery()->whereNotNull('value')->get();
     }
 }

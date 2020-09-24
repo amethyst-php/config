@@ -18,8 +18,7 @@ class ConfigFaker extends Faker
         $bag = new Bag();
         $bag->set('key', $faker->name);
         $bag->set('value', $faker->password);
-        $bag->set('visibility', 'public');
-
+        
         return $bag;
     }
 }

@@ -3,34 +3,32 @@
 namespace Amethyst\Providers;
 
 use Amethyst\Core\Providers\CommonServiceProvider;
-use Amethyst\Managers\ConfigManager;
-use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Schema;
+use Amethyst\Contracts\ConfigLoaderContract;
+use Amethyst\Services\ConfigLoader;
+use Amethyst\Models\Config;
+use Amethyst\Observers\ConfigObserver;
 
 class ConfigServiceProvider extends CommonServiceProvider
-{
+{   
     /**
-     * @var string
+     * @inherit
      */
-    protected $config = 'amethyst.config';
+    public function register()
+    {
+        parent::register();
+
+        $this->app->bind(ConfigLoaderContract::class, ConfigLoader::class);
+    }
 
     /**
-     * Bootstrap any application services.
+     * @inherit
      */
     public function boot()
     {
         parent::boot();
 
-        try {
-            DB::connection()->getPdo();
-        } catch (\Exception $e) {
-            return;
-        }
+        $this->app->make(ConfigLoaderContract::class)->boot();
 
-        if (Schema::hasTable(Config::get('amethyst.config.data.config.table'))) {
-            $manager = new ConfigManager();
-            $manager->loadConfig();
-        }
+        Config::observe(ConfigObserver::class);
     }
 }

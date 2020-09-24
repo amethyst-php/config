@@ -25,18 +25,4 @@ class ConfigManager extends Manager
      * @var string
      */
     protected $config = 'amethyst.config.data.config';
-
-    /**
-     * Load configs.
-     */
-    public function loadConfig()
-    {
-        $configs = $this->getRepository()->findToLoad();
-
-        $configs = $configs->mapWithKeys(function (Config $config, $key) {
-            return [$config->key => $config->value];
-        })->toArray();
-
-        config($configs);
-    }
 }

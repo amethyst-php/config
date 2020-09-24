@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Schema;
 
-class CreateConfigsTable extends Migration
+class CreateConfigTable extends Migration
 {
     /**
      * Run the migrations.
@@ -16,7 +16,6 @@ class CreateConfigsTable extends Migration
             $table->increments('id');
             $table->string('key')->index();
             $table->text('value')->nullable();
-            $table->string('visibility');
             $table->timestamps();
         });
     }

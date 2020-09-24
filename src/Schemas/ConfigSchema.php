@@ -21,8 +21,6 @@ class ConfigSchema extends Schema
                 ->setUnique(true),
             Attributes\LongTextAttribute::make('value')
                 ->setRequired(true),
-            Attributes\EnumAttribute::make('visibility', ['private', 'public'])
-                ->setRequired(true),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
         ];
