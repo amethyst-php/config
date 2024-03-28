@@ -4,10 +4,10 @@ namespace Amethyst\Tests\Managers;
 
 use Amethyst\Fakers\ConfigFaker;
 use Amethyst\Managers\ConfigManager;
-use Amethyst\Tests\BaseTest;
+use Amethyst\Tests\Base;
 use Railken\Lem\Support\Testing\TestableBaseTrait;
 
-class ConfigTest extends BaseTest
+class ConfigTest extends Base
 {
     use TestableBaseTrait;
 

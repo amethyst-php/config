@@ -4,8 +4,8 @@
     "keywords": ["laravel", "amethyst", "amethyst-config", "config"],
     "license": "MIT",
     "require": {
-        "php": ">=7.2",
-        "amethyst/core": "0.2.*"
+        "php": ">=8.2",
+        "amethyst/core": "0.3.*"
     },
     "require-dev": {
         "phpunit/phpunit": "*",

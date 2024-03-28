@@ -8,7 +8,7 @@ use Amethyst\Models\Config;
 class ConfigObserver
 {
     /**
-     * @var Container
+     * @var ConfigLoaderContract
      */
     protected $configLoader;
 

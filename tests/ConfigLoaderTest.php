@@ -4,7 +4,7 @@ namespace Amethyst\Tests;
 
 use Amethyst\Contracts\ConfigLoaderContract;
 
-class ConfigLoaderTest extends BaseTest
+class ConfigLoaderTest extends Base
 {
     public function testBoot()
     {
