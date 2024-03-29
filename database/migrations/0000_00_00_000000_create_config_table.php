@@ -13,7 +13,7 @@ class CreateConfigTable extends Migration
     public function up()
     {
         Schema::create(Config::get('amethyst.config.data.config.table'), function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('key')->index();
             $table->text('value')->nullable();
             $table->timestamps();
